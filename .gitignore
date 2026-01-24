@@ -1,0 +1,25 @@
+# Binaries and Tools
+tools/
+*.exe
+*.zip
+
+# Local Environment
+.vscode/
+__pycache__/
+
+# LaTeX Intermediate Files
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+
+# System Files
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log

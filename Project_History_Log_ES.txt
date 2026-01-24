@@ -1,0 +1,50 @@
+# Diario de Laboratorio Gractal (Project History Log)
+
+Este documento registra la evolución del proyecto "Dynamic Causal Tensor Networks (DCTN)" en un lenguaje claro y accesible, diseñado para trazar la historia de nuestras modificaciones teóricas y técnicas.
+
+---
+
+## 📅 Próximos Pasos (Futuro)
+- [ ] Exploración de anisotropías en la expansión cósmica (Preprint 02).
+- [ ] Refinamiento de la señal de eco gravitacional (Preprint 03).
+- [ ] Compilación final de la trilogía en PDF.
+
+---
+
+## ✅ Historial de Cambios (Pasado)
+
+### [22-Enero-2026] - Refactorización Semántica: De Agujeros Negros a "Nodos Saturados"
+**¿Qué cambiamos?**
+Cambiamos la forma en que nombramos a los objetos en el universo para ser más precisos.
+- **Antes**: Usábamos "Tensor Hub" solo para agujeros negros.
+- **Ahora**: 
+    - **Tensor Hub (Nodo Denso)**: Es cualquier objeto masivo (un planeta, una estrella, una galaxia). Es simplemente una zona donde la red tiene muchos enlaces.
+    - **Saturated Hub (Nodo Saturado)**: Es el nuevo nombre para los Agujeros Negros. Es un "Tensor Hub" que ha llegado al límite máximo de información posible (Límite de Bekenstein). No puede guardar más datos, por eso se "satura".
+**¿Por qué?** Para diferenciar la física normal (estrellas) de la física extrema (agujeros negros) dentro del mismo marco teórico.
+
+### [22-Enero-2026] - Solución a la Tensión de Hubble (Preprint 02 v1.1.0)
+**¿Qué cambiamos?**
+Introdujimos una fórmula para explicar por qué el universo parece expandirse a diferentes velocidades.
+- **Fórmula**: `Expansion_Actual = Expansion_Inicial + Impulso_Gractal` ($E_a = E_i + \alpha_a$).
+- **Hallazgo Clave**: Descubrimos que si sumamos un impulsor del **2.5%** a la expansión original, los datos coinciden casi perfectamente.
+- **Validación**: Comprobamos que con este ajuste, la edad del universo es de **13.75 mil millones de años**, lo cual es correcto porque es más viejo que la estrella más antigua conocida (Matusalén).
+
+### [22-Enero-2026] - Migración a LaTeX (Profesionalización)
+**¿Qué cambiamos?**
+Dejamos de usar archivos de texto básicos (Markdown) para los papers y pasamos a **LaTeX**, el estándar científico mundial.
+- Ahora los documentos tienen formato académico real, con ecuaciones matemáticas bien dibujadas y bibliografía formal.
+- Renombramos los archivos para que sean más descriptivos (ej. de `01_Espacio_Tiempo` a `01_Dynamic_Causal_Tensor_Networks`).
+
+### [22-Enero-2026] - Generación de Evidencia Gráfica (Simulaciones)
+**¿Qué hicimos?**
+Como no teníamos las imágenes originales de las simulaciones, creamos programas (scripts) para volver a generarlas desde cero basándonos en las matemáticas de la teoría.
+- Creamos mapas de cómo se ve la red (Grafos).
+- Generamos la gráfica que demuestra cómo se resuelve el problema de Hubble.
+- Simulamos visualmente un Agujero Negro (Saturated Hub).
+
+### [Inception] - Inicio del Proyecto
+**¿Qué hicimos?**
+Establecimos la estructura de carpetas `Gractal_Labs` y definimos la "Trilogía Gractal":
+1.  **Fundamentos**: ¿De qué está hecho el espacio? (Redes de Tensores).
+2.  **Cosmología**: ¿Cómo crece el universo? (Termodinámica).
+3.  **Fenomenología**: ¿Qué pasa en los extremos? (Agujeros Negros).

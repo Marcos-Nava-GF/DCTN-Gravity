@@ -1,0 +1,50 @@
+# Gractal Lab Diary (Project History Log)
+
+This document records the evolution of the "Dynamic Causal Tensor Networks (DCTN)" project in clear, accessible language, designed to trace the history of our theoretical and technical modifications.
+
+---
+
+## 📅 Next Steps (Future)
+- [ ] Exploration of anisotropies in cosmic expansion (Preprint 02).
+- [ ] Refinement of the gravitational echo signal (Preprint 03).
+- [ ] Final compilation of the trilogy into PDF.
+
+---
+
+## ✅ Change History (Past)
+
+### [Jan-22-2026] - Semantic Refactoring: From Black Holes to "Saturated Hubs"
+**What changed?**
+We changed how we name objects in the universe to be more precise.
+- **Before**: We used "Tensor Hub" only for black holes.
+- **Now**: 
+    - **Tensor Hub (Dense Node)**: Any massive object (a planet, a star, a galaxy). It's simply a zone where the network has many links.
+    - **Saturated Hub**: The new name for Black Holes. It is a "Tensor Hub" that has reached the maximum possible information limit (Bekenstein Limit). It cannot store more data, which is why it becomes "saturated".
+**Why?** To differentiate normal physics (stars) from extreme physics (black holes) within the same theoretical framework.
+
+### [Jan-22-2026] - Hubble Tension Solution (Preprint 02 v1.1.0)
+**What changed?**
+We introduced a formula to explain why the universe seems to expand at different speeds.
+- **Formula**: `Actual_Expansion = Initial_Expansion + Gractal_Impulse` ($E_a = E_i + \alpha_a$).
+- **Key Finding**: We discovered that adding a **2.5%** impulse to the original expansion makes the data match almost perfectly.
+- **Validation**: We verified that with this adjustment, the age of the universe is **13.75 billion years**, which is correct because it is older than the oldest known star (Methuselah).
+
+### [Jan-22-2026] - Migration to LaTeX (Professionalization)
+**What changed?**
+We stopped using basic text files (Markdown) for papers and switched to **LaTeX**, the global scientific standard.
+- Documents now have real academic formatting, with properly drawn mathematical equations and formal bibliography.
+- We renamed files to be more descriptive (e.g., from `01_Espacio_Tiempo` to `01_Dynamic_Causal_Tensor_Networks`).
+
+### [Jan-22-2026] - Generation of Graphic Evidence (Simulations)
+**What did we do?**
+Since we didn't have the original simulation images, we created programs (scripts) to regenerate them from scratch based on the theory's mathematics.
+- We created maps of what the network looks like (Graphs).
+- We generated the chart demonstrating how the Hubble problem is resolved.
+- We visually simulated a Black Hole (Saturated Hub).
+
+### [Inception] - Project Start
+**What did we do?**
+We established the `Gractal_Labs` folder structure and defined the "Gractal Trilogy":
+1.  **Foundations**: What is space made of? (Tensor Networks).
+2.  **Cosmology**: How does the universe grow? (Thermodynamics).
+3.  **Phenomenology**: What happens at the extremes? (Black Holes).

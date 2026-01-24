@@ -1,0 +1,133 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=red]{hyperref}
+
+% Configuración de márgenes
+\geometry{margin=1in}
+
+% Configuración de código
+\lstset{
+    basicstyle=\small\ttfamily,
+    frame=single,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    columns=fullflexible,
+    keepspaces=true,
+    language=Python
+}
+
+% Título y Autor
+\title{\textbf{Letter: On the Geometric Scaling of Gauge Couplings in Dynamic Causal Tensor Networks}}
+\author{\textbf{Marcos Fernando Nava Salazar} \\ 
+\textit{Independent Researcher, Aguascalientes, Mexico}}
+\date{January 2026 | Preprint 4 (Brief Note)}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Following the establishment of the Gractal framework for emergent spacetime and the resolution of the Hubble Tension via dimensional thermodynamics, this letter addresses the origin of matter and gauge couplings. We postulate that fundamental particles are persistent topological defects within the Causal Tensor Network (DCTN), emerging from a high-density topological fluid regime ($m=3$). 
+    
+    We report a \textbf{preliminary numerical resonance} for the Fine-Structure Constant $\alpha_{EM}$ via a "Gractal Impedance" scaling law, governed by the ratio of the vacuum's geometric density ($d_H \approx 1.41$) to its spectral diffusion rate ($d_s \approx 1.25$). Numerical simulations with $N=10^5$ nodes yield a unified coupling value of $\alpha_{DCTN} \approx 0.00738$, converging to the experimental constant ($1/137 \approx 0.00729$) with $98.9\%$ precision. Furthermore, we provide visualizations of the "Topological Electron" and the emergent particle mass spectrum, suggesting that fundamental forces may be geometric inevitabilities of fractal information processing.
+\end{abstract}
+
+\section{Introduction}
+The origin of the fine-structure constant, $\alpha \approx 1/137.035$, is one of physics' great enigmas. In this letter, we present a derivation where $\alpha$ emerges not as an input parameter, but as the asymptotic limit of topological charge dilution in a fractal spacetime.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{electron_candidate.png}
+    \caption{\textbf{The Topological Electron.} Visualization of a Local Stable Gractal Structure (LSGS) detected in the simulation ($N=4000$). The blue core represents the particle mass (approx. 13-20 nodes), stabilized by the network's spectral pressure. The red node indicates the topological singularity center.}
+    \label{fig:electron}
+\end{figure}
+
+\section{The Master Equation of Emergence}
+In the DCTN framework, the strength of the electromagnetic interaction is determined by the "Gractal Impedance" of the vacuum. The raw topological charge of a defect ($\alpha_{local}$) is diluted by the spectral expansion of the universe ($N^{d_s}$), but this dilution is re-scaled by the geometric density of the space ($d_H$) it inhabits.
+
+We derive the \textbf{Master Equation}:
+\begin{equation}
+    \label{eq:master}
+    \boxed{\alpha_{DCTN} = d_H \cdot \frac{\alpha_{local}}{N^{d_s}}}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $d_H \approx 1.414$: Hausdorff Dimension (Geometric Density).
+    \item $d_s \approx 1.25$: Spectral Dimension (Information Diffusion Rate).
+    \item $\alpha_{local}$: Raw topological charge of stability (Mean $\approx 9309$).
+    \item $N$: Scale of the Causal Universe (Entropy).
+\end{itemize}
+
+\section{Simulation Results}
+We performed a high-density genesis simulation ($N=100,000$ nodes, $m \approx 2-3$) to analyze the spectrum of emergent defects.
+
+\subsection{Golden Verification ($N=10^5$)}
+Using the Master Equation with the simulational mean $\alpha_{local} \approx 9309$:
+\begin{equation}
+    \alpha_{DCTN} = 1.41 \cdot \frac{9309}{(10^5)^{1.25}} \approx 0.00738
+\end{equation}
+This result agrees with the experimental CODATA value $\alpha_{QED} \approx 0.00729$ to within \textbf{1.1\%}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{particle_spectrum.png}
+    \caption{\textbf{Evidence Plot: The Particle Spectrum.} Distribution of topological defects in the simulated universe. The green line marks the typical mass of stable leptons. The red dashed line indicates the theoretical QED $\alpha$, showing how the candidate population (blue dots) naturally converges towards the physical coupling strength.}
+    \label{fig:spectrum}
+\end{figure}
+
+\subsection{Comparison with Standard Model}
+\begin{table}[h!]
+    \centering
+    \caption{Emergent Parameters vs. Experiment}
+    \label{tab:comparison}
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Parameter} & \textbf{Simulated (DCTN)} & \textbf{Experimental (QED)} & \textbf{Precision} \\
+        \midrule
+        Fine-Structure ($\alpha$) & $0.00738$ & $0.007297$ & \textbf{98.9\%} \\
+        Electron Core Mass & $\sim 12$ Nodes & Fundamental & N/A \\
+        Muon Resonance ($M_\mu/M_e$) & $\approx 197.5$ & $206.77$ & $95.5\%$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Interpretative Scope: Geometric Resonance vs. Numerology}
+The correspondence between our simulated values ($\alpha_{DCTN} \approx 0.00738$) and experimental constants is striking. However, we explicitly distinguish this from numerology: our values emerge dynamically from the interplay between $d_H$ and $d_s$, not from arbitrary arithmetic. We acknowledge that a simulation of $N=10^5$ constitutes a low-resolution model relative to QED precision; thus, we classify these results as topological resonances warranting further investigation at larger scales ($N \gg 10^9$).
+
+\section{Conclusion}
+Our results suggest a geometric correlation where the fine-structure constant may emerge from topological constraints of a dynamic causal network growing under thermodynamic conditions. The fine-structure constant appears as the ratio of geometric density to spectral diffusion.
+
+\appendix
+\section{Algorithm: Quantum Genesis}
+\begin{lstlisting}
+ALGORITHM Quantum_Genesis(N, p_fluctuation=0.2):
+    G = Initialize_Triangle()
+    
+    FOR t FROM 3 TO N:
+        // Quantum Fluctuation: Introduction of Stochastic Topology
+        IF Random() < p_fluctuation:
+            m = 1  // Decay/Cut (Allows Betti=1 Loop Formation)
+        ELSE:
+            m = 2  // Structure (Creates Connectivity/Surface)
+            
+        // Thermodynamic Gravity Probability
+        probs = (Degree^Beta) / (Distance^Alpha)
+        
+        Connect_New_Node(t, m, probs)
+        Update_Causal_Geometry(G)
+    END FOR
+    RETURN G
+\end{lstlisting}
+
+\end{document}

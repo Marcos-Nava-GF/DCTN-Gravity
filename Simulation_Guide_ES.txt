@@ -1,0 +1,35 @@
+# Guía de Simulaciones Gractal
+
+Este archivo explica qué hace cada simulador programado en Python y con qué Preprint (Paper) se conecta. Todos los scripts se encuentran en la carpeta `External_Assets` o `Simulations`.
+
+---
+
+## 🧪 Simulación 1: Topología y Transición de Fase
+**Archivo**: `generate_transition_figs.py` y `gractal_generation.py`
+**Vinculado a**: 📄 **Preprint 01: Dynamic Causal Tensor Networks**
+...
+## 🧪 Simulación 2a: Calibración de la Tensión de Hubble (1D)
+**Archivo**: `Simulations/Hubble_Tension/hubble_tension_calibration.py`
+...
+## 🧪 Simulación 2b: Dinámica de Densidad (Curva 1D)
+**Archivo**: `Simulations/Hubble_Tension/hubble_tension_density.py`
+**Vinculado a**: 📄 **Preprint 02 (Napkin Logic)**
+
+### ¿Qué hace?
+Simula la ecuación `Ea = Ei * (1 + alpha/rho^x)`. Muestra gráficamente cómo la expansión es más rápida en el vacío.
+
+## 🧪 Simulación 2c: Cosmología N-Body Gractal (3D)
+**Archivo**: `Simulations/Hubble_Tension/gractal_nbody_simulation.py`
+**Vinculado a**: 📄 **Preprint 02**
+
+### ¿Qué hace?
+Genera un "Universo de Juguete" en 3D con 2000 nodos distribuidos fractalmente ($d_H \approx 1.41$).
+1.  Calcula la densidad real de cada punto en el espacio 3D.
+2.  Aplica la "Lógica de la Servilleta" a cada partícula.
+3.  **Resultado**: Un mapa 3D (`p2_fig3_nbody_expansion.png`) donde los filamentos vacíos brillan con alta expansión (rojo) y los cúmulos densos se mantienen estables (azul).
+4.  Genera datos crudos en `gractal_simulation_data.csv`.
+
+---
+
+## 🧪 Simulación 3: Flujo de la Dimensión Espectral
+...
