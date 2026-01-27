@@ -1,22 +1,25 @@
-# Gractal Simulation Guide
+# Gractal Simulation Guide (v1.6 Refactored)
 
 This file explains what each Python simulator does and which Preprint (Paper) it connects to. All scripts are located in the `External_Assets` or `Simulations` folder.
 
 ---
 
 ## 🧪 Simulation 1: Topology & Phase Transition
-**File**: `generate_transition_figs.py` and `gractal_generation.py`
+**File**: `Simulations/gractal_generation.py`
 **Linked to**: 📄 **Preprint 01: Dynamic Causal Tensor Networks**
+**Parameters Updated v1.6**: Uses `GAMMA` (Topology) instead of Alpha.
 ...
 ## 🧪 Simulation 2a: Hubble Tension Calibration (1D)
-**File**: `Simulations/Hubble_Tension/hubble_tension_calibration.py`
-...
+**File**: `Simulations/hubble_tension_calibration.py`
+**Linked to**: 📄 **Preprint 02 (Hubble Tension)**
+**Parameters Updated v1.6**: Uses `DELTA_H` (Hubble Correction) instead of Alpha_a.
+
 ## 🧪 Simulation 2b: Density Dynamics (1D Curve)
-**File**: `Simulations/Hubble_Tension/hubble_tension_density.py`
-**Linked to**: 📄 **Preprint 02 (Napkin Logic)**
+**File**: `Simulations/hubble_tension_density.py`
+**Linked to**: 📄 **Preprint 02**
 
 ### What does it do?
-Simulates the equation `Ea = Ei * (1 + alpha/rho^x)`. Graphically shows how expansion is faster in voids.
+Simulates the equation `Ea = Ei * (1 + delta_h/rho^x)`. Graphically shows how expansion is faster in voids.
 
 ## 🧪 Simulation 2c: Gractal N-Body Cosmology (3D)
 **File**: `Simulations/Hubble_Tension/gractal_nbody_simulation.py`
@@ -25,7 +28,7 @@ Simulates the equation `Ea = Ei * (1 + alpha/rho^x)`. Graphically shows how expa
 ### What does it do?
 Generates a "Toy Universe" in 3D with 2000 nodes distributed fractally ($d_H \approx 1.41$).
 1.  Calculates the actual density of each point in 3D space.
-2.  Applies the "Napkin Logic" to each particle.
+2.  Applies the "Density Scaling Law" to each particle.
 3.  **Result**: A 3D map (`p2_fig3_nbody_expansion.png`) where empty filaments glow with high expansion (red) and dense clusters remain stable (blue).
 4.  Generates raw data in `gractal_simulation_data.csv`.
 
@@ -33,3 +36,12 @@ Generates a "Toy Universe" in 3D with 2000 nodes distributed fractally ($d_H \ap
 
 ## 🧪 Simulation 3: Spectral Dimension Flow
 ...
+
+## 🧪 Simulation 4: The Topological Electron (Matter Emergence)
+**File**: `Simulations/visualize_electron.py`
+**Linked to**: 📄 **Preprint 04: Letter on Matter & Alpha**
+
+### What does it do?
+It searches for and visualizes **Local Stable Gractal Structures (LSGS)** within the generated network.
+- **Goal**: Identify subgraphs that resist spectral dissolution.
+- **Output**: `electron_candidate.png`. Shows a dense core (blue) surviving in the vacuum. This is our candidate for a fundamental particle (Lepton) emerging from pure geometry.

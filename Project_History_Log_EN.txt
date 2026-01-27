@@ -4,14 +4,30 @@ This document records the evolution of the "Dynamic Causal Tensor Networks (DCTN
 
 ---
 
-## 📅 Next Steps (Future)
-- [ ] Exploration of anisotropies in cosmic expansion (Preprint 02).
-- [ ] Refinement of the gravitational echo signal (Preprint 03).
-- [ ] Final compilation of the trilogy into PDF.
+## 📅 Next Steps (Future: Roadmap v2.0)
+- [ ] **Quantum Mechanics**: Simulate the Double Slit experiment on a graph (Preprint 5?).
+- [ ] **Dynamics**: Simulate particle collisions (Feynman Diagrams).
+- [ ] **Energy Source**: Define the thermodynamic "Bulk" reservoir.
 
 ---
 
 ## ✅ Change History (Past)
+
+### [Jan-27-2026] - Refactoring v1.6: Notation Clarity & Theoretical Bonding
+**What changed?**
+We solved a critical confusion in our symbols to separate Geometry from Physics.
+- **Gamma ($\gamma$)**: Now represents the **Causal Cost Exponent** (Topology), replacing the old $\alpha$.
+- **Delta_H ($\delta_H$)**: Now represents the **Hubble Correction** (+2.5%), replacing $\alpha_a$.
+- **Alpha ($\alpha_{EM}$)**: Reserved exclusively for the **Fine-Structure Constant** (1/137).
+- **Theory Update**: We explicitly connected "Saturated Hubs" (Black Holes) with "Topological Monsters" (High-Betti Number structures), suggesting Black Holes are just giant hadrons.
+
+### [Jan-23-2026] - The Gold Standard (Preprint 4: Matter & Alpha)
+**Major Breakthrough:**
+We completed the "Tetralogy" with a Letter deriving the Fine-Structure Constant from first principles.
+- **The Discovery**: We found that $\alpha_{EM} \approx 1/137$ emerges naturally from the ratio of Space Density ($d_H \approx 1.41$) to Information Flow ($d_s \approx 1.25$).
+- **Precision**: Our simulated value ($0.00738$) matches reality ($0.00729$) with **98.9% precision**.
+- **Matter**: We visualized the "Topological Electron" (a stable knot in the network).
+- **Anti-Numerology**: We added a strict "Interpretative Scope" to distinguish our geometric resonance from random number guessing.
 
 ### [Jan-22-2026] - Semantic Refactoring: From Black Holes to "Saturated Hubs"
 **What changed?**

@@ -32,7 +32,7 @@ language=C++
 \maketitle
 
 \begin{abstract}
-We introduce Dynamic Causal Tensor Networks (DCTN) as a background-independent framework unifying causal sets, tensor networks, and graph thermodynamics. We postulate that spacetime emerges from the local relaxation of a causal hypergraph toward a state of maximum entropy. By simulating the system's universality class, we identify a topological phase transition at the critical causal cost $\alpha_c \approx 2.5$, generating a "Gractal" (Graph-Fractal) geometry. We report the emergence of a scale-dependent spectral dimension flowing from $d_s^{UV} \approx 1.25$ to $d_s^{IR} \approx 4.0$, providing a mechanism for UV-completeness. Furthermore, we demonstrate that the network converges asymptotically to a Hausdorff dimension of $d_H \approx 1.41$, establishing a rigorous discrete foundation for filamentous cosmic structures consistent with the thermodynamic emergent gravity paradigm.
+We introduce Dynamic Causal Tensor Networks (DCTN) as a background-independent framework unifying causal sets, tensor networks, and graph thermodynamics. We postulate that spacetime emerges from the local relaxation of a causal hypergraph toward a state of maximum entropy. By simulating the system's universality class, we identify a topological phase transition at the critical causal cost $\gamma_c \approx 2.5$, generating a "Gractal" (Graph-Fractal) geometry. We report the emergence of a scale-dependent spectral dimension flowing from $d_s^{UV} \approx 1.25$ to $d_s^{IR} \approx 4.0$, providing a mechanism for UV-completeness. Furthermore, we demonstrate that the network converges asymptotically to a Hausdorff dimension of $d_H \approx 1.41$, establishing a rigorous discrete foundation for filamentous cosmic structures consistent with the thermodynamic emergent gravity paradigm.
 \end{abstract}
 
 % --- START NOMENCLATURE TABLE ---
@@ -45,9 +45,9 @@ We introduce Dynamic Causal Tensor Networks (DCTN) as a background-independent f
         \toprule
         \textbf{Symbol} & \textbf{Physical Meaning} & \textbf{Critical Value / Regime} \\
         \midrule
-        $\alpha$ & Causal Cost Exponent (Topology) & $\alpha_c \approx 2.5$ (Phase Transition) \\
+        $\gamma$ & Causal Cost Exponent (Topology) & $\gamma_c \approx 2.5$ (Phase Transition) \\
         $\beta$ & Cohesion Coefficient (Gravity) & $\beta \approx 1.2$ (Cosmos) / $\beta \ge 5.0$ (BH) \\
-        $\delta$ & Dimensional Perturbation (Thermodynamics) & $\delta = +2.5\%$ ($H_0$ Tension Mitigation) \\
+        $\delta_H$ & Hubble Correction Factor & $\delta_H = +2.5\%$ ($H_0$ Tension Mitigation) \\
         $d_s$ & Spectral Dimension (Diffusion) & $d_s^{UV} \approx 1.25 \to d_s^{IR} \approx 4.0$ \\
         $d_H$ & Hausdorff Dimension (Fractality) & $d_H \approx 1.41$ (Filamentous Structure) \\
         $n$ & Lorentz Violation Order (LIV) & $n=2$ (Quadratic Suppression) \\
@@ -56,7 +56,7 @@ We introduce Dynamic Causal Tensor Networks (DCTN) as a background-independent f
     \end{tabular}
     \footnotesize
     \vspace{0.1cm}
-    \\ \textit{Note: The values presented are results derived from stochastic simulations described throughout the preprint trilogy.}
+    \\ \textit{Note: The values presented are results derived from stochastic simulations described throughout the preprint trilogy. $\gamma$ replaces the symbol $\alpha$ used in previous versions to avoid confusion with the Fine-Structure Constant.}
 \end{table}
 % --- END NOMENCLATURE TABLE ---
 
@@ -87,9 +87,9 @@ Where the indices encode causal (past/future), spatial, and internal (gauge/matt
 \noindent \textbf{Corollary (Saturated Hub):} In the limit where connectivity reaches the Bekenstein bound ($k_i \to k_{max}$), the Tensor Hub is defined as a \textit{Saturated Hub}, physically corresponding to a Black Hole (see Preprint 3).
 
 \subsection{Causal Growth Dynamics}
-The evolution of the network is governed by a connection probability $P$ that competes between cohesion ($\beta$) and causal separation ($\alpha$):
+The evolution of the network is governed by a connection probability $P$ that competes between cohesion ($\beta$) and causal separation ($\gamma$):
 \begin{equation}
-P(T_{\text{new}} | \{ T_i \}) \propto \frac{(\sum \text{deg}_i)^\beta}{[\Delta \tau_{ij}]^\alpha}
+P(T_{\text{new}} | \{ T_i \}) \propto \frac{(\sum \text{deg}_i)^\beta}{[\Delta \tau_{ij}]^\gamma}
 \end{equation}
 Where $\Delta \tau_{ij}$ represents the discrete geodesic distance (causal interval) between nodes.
 
@@ -99,15 +99,15 @@ Where $\Delta \tau_{ij}$ represents the discrete geodesic distance (causal inter
          \centering
          % Replace with the actual image filename
          \includegraphics[width=\textwidth]{images/p1_fig1a_topology_alpha1.png} 
-         \caption{$\alpha=1.0$}
+         \caption{$\gamma=1.0$}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.45\textwidth}
          \centering
          \includegraphics[width=\textwidth]{images/p1_fig1b_topology_alpha25.png}
-         \caption{$\alpha=2.5$}
+         \caption{$\gamma=2.5$}
      \end{subfigure}
-     \caption{Topological phase transition in the DCTN. (a) Collapse regime characterized by high connection density. (b) Emergence of Gractal topology at the critical point.}
+     \caption{Topological phase transition in the DCTN. (a) Collapse regime characterized by high connection density. (b)Emergence of Gractal topology at the critical point $\gamma_c \approx 2.5$.}
      \label{fig:transition}
 \end{figure}
 
@@ -170,7 +170,7 @@ Where:
 
 \section{Numerical Results and Gractal Topology}
 
-Scale simulations ($N=1500$) were performed with critical parameters ($\alpha=2.5, \beta=1.2$).
+Scale simulations ($N=1500$) were performed with critical parameters ($\gamma=2.5, \beta=1.2$).
 
 \subsection{Ollivier-Ricci Curvature}
 Discrete curvature shows convergence towards macroscopic flatness (Table \ref{tab:curvatura}).
@@ -275,7 +275,7 @@ Our analysis indicates that the DCTN framework exhibits robust Finite-Size Scali
 \end{itemize}
 
 \section{Conclusion and Outlook}
-The foundations of DCTN establish that smooth geometry is a byproduct of entanglement and information dissipation. The stability of results for $\alpha=2.5$ allows progression towards Preprint 2.
+The foundations of DCTN establish that smooth geometry is a byproduct of entanglement and information dissipation. The stability of results for $\gamma=2.5$ allows progression towards Preprint 2.
 
 \section{Data and Code Availability}
 To ensure transparency and reproducibility of the results presented in this trilogy, the Python source code developed for the Monte Carlo simulations, gractal topology generation, and Ollivier-Ricci curvature analysis is publicly available in the following repository:

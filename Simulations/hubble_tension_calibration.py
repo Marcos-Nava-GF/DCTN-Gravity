@@ -52,15 +52,15 @@ def run_calibration_simulation():
     print(f"Base Ei (Planck): {H0_PLANCK_BASE} km/s/Mpc")
     print(f"Target (SH0ES): {H0_SHOES} km/s/Mpc")
     
-    # Define range of Alpha_a (Dimensional Perturbation in km/s/Mpc) 
+    # Define range of Delta_H (Dimensional Perturbation in km/s/Mpc) 
     # 0 to 5.0 units
-    alphas = np.linspace(0, 5.0, 50)
+    deltas_h = np.linspace(0, 5.0, 50)
     
     results = []
     
-    for alpha in alphas:
-        # Mechanics: Ea = Ei + alpha_a (Additive boost as per "Impulse" logic)
-        E_a = H0_PLANCK_BASE + alpha
+    for delta_h in deltas_h:
+        # Mechanics: Ea = Ei + delta_h (Additive boost as per "Impulse" logic)
+        E_a = H0_PLANCK_BASE + delta_h
         
         # Calculate Tension
         diff = H0_SHOES - E_a
@@ -73,7 +73,7 @@ def run_calibration_simulation():
         age = age_raw * 1.04 
         
         results.append({
-            "alpha": alpha,
+            "delta_h": delta_h,
             "E_a": E_a,
             "tension_diff": diff,
             "age": age
@@ -82,12 +82,12 @@ def run_calibration_simulation():
     # Find Sweet Spot (approx 2.45 - 2.5)
     # Target Adjusted Value defined by user: 70.33
     # 70.33 - 67.88 = 2.45
-    target_alpha_val = 2.45
-    idx = (np.abs(alphas - target_alpha_val)).argmin()
+    target_delta_val = 2.45
+    idx = (np.abs(deltas_h - target_delta_val)).argmin()
     sweet_spot = results[idx]
     
-    print("\n--- RESULTS FOR ALPHA_A = +2.45 (approx 2.5%) ---")
-    print(f"Alpha_a: {sweet_spot['alpha']:.2f} km/s/Mpc")
+    print("\n--- RESULTS FOR DELTA_H = +2.45 (approx 2.5%) ---")
+    print(f"Delta_H: {sweet_spot['delta_h']:.2f} km/s/Mpc")
     print(f"E_a (Adjusted H0): {sweet_spot['E_a']:.2f} km/s/Mpc")
     print(f"Tension (Diff): {sweet_spot['tension_diff']:.2f} km/s/Mpc")
     print(f"Universe Age: {sweet_spot['age']:.2f} Ga")
@@ -99,16 +99,16 @@ def run_calibration_simulation():
         print("[INVALID] Universe too young!")
 
     # --- PLOTTING ---
-    alpha_vals = alphas
+    delta_vals = deltas_h
     ea_values = [r['E_a'] for r in results]
     age_values = [r['age'] for r in results]
     
     fig, ax1 = plt.subplots(figsize=(10, 6))
     
     color = 'tab:blue'
-    ax1.set_xlabel('Dimensional Perturbation alpha_a (km/s/Mpc)')
+    ax1.set_xlabel('Dimensional Perturbation Delta_H (km/s/Mpc)')
     ax1.set_ylabel('Resulting H0 (Ea)', color=color)
-    ax1.plot(alpha_vals, ea_values, color=color, linewidth=2, label='Adjusted H0 (Ea)')
+    ax1.plot(delta_vals, ea_values, color=color, linewidth=2, label='Adjusted H0 (Ea)')
     ax1.tick_params(axis='y', labelcolor=color)
     
     # Removed reference lines to match Preprint caption strictness
@@ -119,7 +119,7 @@ def run_calibration_simulation():
     
     color = 'tab:red'
     ax2.set_ylabel('Universe Age (Ga)', color=color)  
-    ax2.plot(alpha_vals, age_values, color=color, linewidth=2, linestyle='-.', label='Universe Age')
+    ax2.plot(delta_vals, age_values, color=color, linewidth=2, linestyle='-.', label='Universe Age')
     ax2.tick_params(axis='y', labelcolor=color)
     
     # Methuselah Limit line removed from visual to avoid confusion with unmentioned features
@@ -128,7 +128,7 @@ def run_calibration_simulation():
     # Highlight Sweet Spot
     plt.axvline(x=2.45, color='purple', linestyle='-', alpha=0.7, label='Sweet Spot (+2.5)')
     
-    plt.title('Hubble Tension Mitigation via Dimensional Impulse (alpha_a)')
+    plt.title('Hubble Tension Mitigation via Dimensional Impulse (Delta_H)')
     fig.tight_layout()
     
     # Save directly to Preprints folder

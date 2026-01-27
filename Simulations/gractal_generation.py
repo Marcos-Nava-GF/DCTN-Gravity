@@ -26,16 +26,17 @@ import time
 # --- EXPERIMENTAL CONFIGURATION ---
 N_NODES = 1500  # Network size
 M_LINKS = 4  # Connections per step (Coordination number)
-ALPHA = 2.5  # Causal Decay (Critical Point: Adjust to 1.0 to see collapse)
+ALPHA = 2.5  # REMOVED
+GAMMA = 2.5  # Causal Decay (Critical Point: Adjust to 1.0 to see collapse)
 BETA = 1.2  # Preferential Attachment Power (Mass/Gravity influence)
 
 
-def generate_dctn_network(n_nodes, m_links, alpha, beta):
+def generate_dctn_network(n_nodes, m_links, gamma, beta):
     """
     Generates a Gractal network using the DCTN growth rule.
     Optimized for performance using vectorization.
     """
-    print(f"--- GENERATING GRACTAL NETWORK (Nodes: {n_nodes}, Alpha: {alpha}) ---")
+    print(f"--- GENERATING GRACTAL NETWORK (Nodes: {n_nodes}, Gamma: {gamma}) ---")
     start_time = time.time()
 
     # Initialize with a complete graph nucleus
@@ -58,9 +59,9 @@ def generate_dctn_network(n_nodes, m_links, alpha, beta):
         dist_causal = np.maximum(dist_causal, 1)
 
         # 2. Probability Calculation (The Gractal Equation)
-        # P ~ (Degree^Beta) / (TimeDistance^Alpha)
+        # P ~ (Degree^Beta) / (TimeDistance^Gamma)
         current_degrees = np.array(degrees)
-        weights = (current_degrees ** beta) / (dist_causal ** alpha)
+        weights = (current_degrees ** beta) / (dist_causal ** gamma)
 
         weight_sum = weights.sum()
         if weight_sum == 0:
@@ -149,7 +150,7 @@ def visualize_results(G_ricci, slope, r_val, radii_list, mass_list):
     cbar = plt.colorbar(sm, ax=ax1, fraction=0.046, pad=0.04)
     cbar.set_label('Scalar Ricci Curvature (Rv)', rotation=270, labelpad=15)
 
-    ax1.set_title(f"Gractal Topology ($\\alpha={ALPHA}$)\nMean Curvature: {avg_curv:.4f}")
+    ax1.set_title(f"Gractal Topology ($\\gamma={GAMMA}$)\nMean Curvature: {avg_curv:.4f}")
     ax1.axis('off')
 
     # --- RIGHT PLOT: Fractal Scaling ---
@@ -185,7 +186,7 @@ def visualize_results(G_ricci, slope, r_val, radii_list, mass_list):
 
 if __name__ == "__main__":
     # 1. Generate
-    G = generate_dctn_network(N_NODES, M_LINKS, ALPHA, BETA)
+    G = generate_dctn_network(N_NODES, M_LINKS, GAMMA, BETA)
 
     # 2. Analyze
     G_ricci, dH, r2, rads, mass = analyze_topology(G)

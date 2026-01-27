@@ -18,10 +18,19 @@ Where:
 * **$N$**: Universe Scale (Nodes).
 
 **Experimental Validation:**
+
 Using the simulation data:
-$$ \alpha_{DCTN} = 1.41 \times \frac{9309}{100000^{1.25}} \approx 0.00738 $$
+
+$$
+\alpha_{DCTN} = 1.41 \times \frac{9309}{100000^{1.25}} \approx 0.00738
+$$
+
 Compared to the standard model:
-$$ \alpha_{QED} \approx \frac{1}{137.036} \approx 0.00729 $$
+
+$$
+\alpha_{QED} \approx \frac{1}{137.036} \approx 0.00729
+$$
+
 **Relative Error:** $\approx 1.1\%$
 
 ---

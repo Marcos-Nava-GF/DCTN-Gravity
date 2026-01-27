@@ -4,14 +4,30 @@ Este documento registra la evolución del proyecto "Dynamic Causal Tensor Networ
 
 ---
 
-## 📅 Próximos Pasos (Futuro)
-- [ ] Exploración de anisotropías en la expansión cósmica (Preprint 02).
-- [ ] Refinamiento de la señal de eco gravitacional (Preprint 03).
-- [ ] Compilación final de la trilogía en PDF.
+## 📅 Próximos Pasos (Futuro: Roadmap v2.0)
+- [ ] **Mecánica Cuántica**: Simular el experimento de Doble Rendija en el grafo.
+- [ ] **Dinámica**: Simular colisiones de partículas (Diagramas de Feynman).
+- [ ] **Fuente de Energía**: Definir el reservorio termodinámico del "Bulk".
 
 ---
 
 ## ✅ Historial de Cambios (Pasado)
+
+### [27-Enero-2026] - Refactorización v1.6: Claridad de Notación y Unión Teórica
+**¿Qué cambiamos?**
+Resolvimos una confusión crítica en los símbolos para separar la Geometría de la Física.
+- **Gamma ($\gamma$)**: Ahora representa el **Exponente de Coste Causal** (Topología), reemplazando a la vieja $\alpha$.
+- **Delta_H ($\delta_H$)**: Ahora representa la **Corrección de Hubble** (+2.5%), reemplazando a $\alpha_a$.
+- **Alpha ($\alpha_{EM}$)**: Reservada exclusivamente para la **Constante de Estructura Fina** (1/137).
+- **Teoría**: Conectamos explícitamente los "Agujeros Negros" con los "Monstruos Topológicos" (Betti Number > 1), sugiriendo que son hadrones gigantes.
+
+### [23-Enero-2026] - El Estándar de Oro (Preprint 4: Materia y Alpha)
+**Gran Avance:**
+Completamos la "Tetralogía" con una Carta (Letter) derivando la Constante de Estructura Fina desde primeros principios.
+- **El Descubrimiento**: Encontramos que $\alpha_{EM} \approx 1/137$ emerge naturalmente de la razón entre Densidad Espacial ($d_H \approx 1.41$) y Flujo de Información ($d_s \approx 1.25$).
+- **Precisión**: Nuestro valor simulado ($0.00738$) coincide con la realidad ($0.00729$) con **98.9% de precisión**.
+- **Materia**: Visualizamos el "Electrón Topológico" (un nudo estable en la red).
+- **Anti-Numerología**: Añadimos un "Alcance Interpretativo" estricto para proteger el hallazgo de críticas por numerología.
 
 ### [22-Enero-2026] - Refactorización Semántica: De Agujeros Negros a "Nodos Saturados"
 **¿Qué cambiamos?**
