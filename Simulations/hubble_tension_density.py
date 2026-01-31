@@ -3,18 +3,19 @@ import matplotlib.pyplot as plt
 import os
 
 # Base Parameters from DCTN Theory
+# Base Parameters from DCTN Theory
 E_i = 67.88          # Initial Expansion (Planck)
-alpha_base = 0.025   # The "+2.5%" Sweet Spot
+delta_h_base = 0.025   # The "+2.5%" Sweet Spot
 d_H = 1.4151         # Hausdorff Dimension (Fractal)
 
 # Local density simulation (0.1 = Voids, 5.0 = Galaxy Clusters/Hubs)
 # rho = 1.0 is the mean density of the toy model
 densities = np.linspace(0.1, 5.0, 100) 
 
-def calculate_local_expansion(rho, base, alpha, dim):
+def calculate_local_expansion(rho, base, delta_h, dim):
     """
-    Calculates Ea based on the 'Napkin Logic': Ea = Ei + alpha_a
-    Where alpha_a depends on density rho and topology d_H.
+    Calculates Ea based on the 'Density Scaling Law': Ea = Ei + delta_h
+    Where delta_h depends on density rho and topology d_H.
     
     The dissipation efficiency decreases as the network saturates (Hubs).
     We use an inverse relation based on filamentous structure:
@@ -26,15 +27,15 @@ def calculate_local_expansion(rho, base, alpha, dim):
     """
     # Inverse relation: Lower density -> Higher efficiency (Void effect)
     # Higher density -> Lower efficiency (Saturation effect)
-    alpha_local = alpha * (1 / (rho**(2 - dim))) 
+    delta_local = delta_h * (1 / (rho**(2 - dim))) 
     
     # We apply the boost as a percentage of the base
-    # Formula: Ea = Ei * (1 + alpha_local)
-    # Or additive: Ea = Ei + (Ei * alpha_local)
-    return base + (base * alpha_local)
+    # Formula: Ea = Ei * (1 + delta_local)
+    # Or additive: Ea = Ei + (Ei * delta_local)
+    return base + (base * delta_local)
 
 # Run simulation
-E_a_values = [calculate_local_expansion(r, E_i, alpha_base, d_H) for r in densities]
+E_a_values = [calculate_local_expansion(r, E_i, delta_h_base, d_H) for r in densities]
 
 # Visualization
 plt.figure(figsize=(10, 6))

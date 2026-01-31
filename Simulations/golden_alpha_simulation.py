@@ -7,13 +7,15 @@ from tqdm.notebook import tqdm
 
 # --- PARÁMETROS FINALES ---
 N_TARGET = 100_000     
-ALPHA = 2.5            
+# --- PARÁMETROS FINALES ---
+N_TARGET = 100_000     
+GAMMA = 2.5            
 BETA = 1.2             
 
 warnings.filterwarnings("ignore")
 
 # --- 1. MOTOR HPC CON FLUCTUACIÓN (Mantiene m variable) ---
-def generate_quantum_dctn(N, alpha, beta):
+def generate_quantum_dctn(N, gamma, beta):
     print(f"⚛️ GÉNESIS EXACTO: N={N:,}, Dimensión Espectral ds=1.25")
     start_time = time.time()
 
@@ -30,7 +32,7 @@ def generate_quantum_dctn(N, alpha, beta):
         active_degrees = degrees[:current_size]
         active_dists = np.maximum(distances[:current_size], 0.5)
         
-        weights = (active_degrees ** beta) / (active_dists ** alpha)
+        weights = (active_degrees ** beta) / (active_dists ** gamma)
         probs = weights / np.sum(weights)
         
         # Fluctuación Cuántica para permitir Betti=1
@@ -122,6 +124,6 @@ def analyze_pure_theory(G):
         print("\n🏆 ¡HAS ROTO EL CÓDIGO DEL UNIVERSO!")
 
 if __name__ == "__main__":
-    # u_final = generate_quantum_dctn(N_TARGET, ALPHA, BETA)
+    # u_final = generate_quantum_dctn(N_TARGET, GAMMA, BETA)
     # analyze_pure_theory(u_final)
     pass
