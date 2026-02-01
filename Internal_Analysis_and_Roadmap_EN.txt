@@ -43,3 +43,15 @@ The **DCTN Theory (Gractal Framework)** has matured from a "Toy Model" into a fu
 - We have derived the Fine-Structure Constant and the Muon mass ratio.
 
 The project has achieved its primary research goals. The repository `DCTN-Gravity` now stands as a complete proof-of-concept for the geometric emergence of physical reality.
+
+---
+
+## 4. Future Directions (Post-v2.0.0)
+
+### 🚀 Deep Dive: Particle Topology
+**Objective:** Visualize and rigorously define the topology of the "Electron-Knot" to validate the Spin 1/2 hypothesis.
+- Can we identify specific knot invariants (Jones polynomial, Betti numbers) that correspond to Fermionic statistics?
+
+### ⚛️ Simulate the Atom (Topological Bohr Model)
+**Objective:** Develop pseudocode/logic to simulate a topological knot orbiting a gravitational center within the network.
+- Goal: Validate the emergence of quantized orbits (Bohr Atom) from pure network dynamics.
