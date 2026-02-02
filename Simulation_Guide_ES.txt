@@ -1,47 +1,50 @@
-# Guía de Simulaciones Gractal (v1.6 Refactorizada)
+# Guía de Simulación Gractal (v2.0 Unificada)
 
-Este archivo explica qué hace cada simulador programado en Python y con qué Preprint (Paper) se conecta. Todos los scripts se encuentran en la carpeta `External_Assets` o `Simulations`.
-
----
-
-## 🧪 Simulación 1: Topología y Transición de Fase
-**Archivo**: `Simulations/gractal_generation.py`
-**Vinculado a**: 📄 **Preprint 01: Dynamic Causal Tensor Networks**
-**Parámetros v1.6**: Usa `GAMMA` (Topología) en lugar de Alpha.
-...
-## 🧪 Simulación 2a: Calibración de la Tensión de Hubble (1D)
-**Archivo**: `Simulations/hubble_tension_calibration.py`
-**Vinculado a**: 📄 **Preprint 02 (Hubble Tension)**
-**Parámetros v1.6**: Usa `DELTA_H` (Corrección Hubble) en lugar de Alpha_a.
-
-## 🧪 Simulación 2b: Dinámica de Densidad (Curva 1D)
-**Archivo**: `Simulations/hubble_tension_density.py`
-**Vinculado a**: 📄 **Preprint 02**
-
-### ¿Qué hace?
-Simula la ecuación `Ea = Ei * (1 + delta_h/rho^x)`. Muestra gráficamente cómo la expansión es más rápida en el vacío.
-
-## 🧪 Simulación 2c: Cosmología N-Body Gractal (3D)
-**Archivo**: `Simulations/Hubble_Tension/gractal_nbody_simulation.py`
-**Vinculado a**: 📄 **Preprint 02**
-
-### ¿Qué hace?
-Genera un "Universo de Juguete" en 3D con 2000 nodos distribuidos fractalmente ($d_H \approx 1.41$).
-1.  Calcula la densidad real de cada punto en el espacio 3D.
-2.  Aplica la "Ley de Escala de Densidad" a cada partícula.
-3.  **Resultado**: Un mapa 3D (`p2_fig3_nbody_expansion.png`) donde los filamentos vacíos brillan con alta expansión (rojo) y los cúmulos densos se mantienen estables (azul).
-4.  Genera datos crudos en `gractal_simulation_data.csv`.
+Esta carpeta contiene las suites de simulación oficiales para Gractal Labs (Teoría DCTN).
+Toda la funcionalidad se ha consolidado en 3 herramientas principales para facilitar su uso.
 
 ---
 
-## 🧪 Simulación 3: Flujo de la Dimensión Espectral
-...
+## 🧪 1. Suite Computacional Golden-DCTN
+**Archivo**: `Simulations/golden_dctn_suite.py`
+**Vinculado a**: 📄 **The Golden-DCTN Theory (Monografía)**
 
-## 🧪 Simulación 4: El Electrón Topológico (Emergencia de Materia)
-**Archivo**: `Simulations/visualize_electron.py`
-**Vinculado a**: 📄 **Preprint 04: Letter on Matter & Alpha**
+**Funcionalidad**:
+Un demostrador unificado que visualiza analíticamente los pilares centrales de la teoría sin simulación Monte Carlo pesada.
+*   **Jerarquía de Masas**: Calcula Nudos Primos para partículas estándar (Electrón, Muón, Higgs).
+*   **Relatividad**: Grafica la Dilatación del Tiempo como Latencia de Ancho de Banda.
+*   **Fuerza Fuerte**: Visualiza el Puente de Saturación entre protones.
+*   **Génesis**: Simula la Cristalización Áurea del Big Bang.
+*   **Ejecutar**: `python golden_dctn_suite.py`
 
-### ¿Qué hace?
-Busca y visualiza **Estructuras Gractales Locales Estables (LSGS)** dentro de la red generada.
-- **Objetivo**: Identificar subgrafos que resisten la disolución espectral.
-- **Resultado**: `electron_candidate.png`. Muestra un núcleo denso (azul) sobreviviendo en el vacío. Este es nuestro candidato para una partícula fundamental (Leptón) emergiendo de la geometría pura.
+---
+
+## 🧪 2. Suite de Simulación Hubble
+**Archivo**: `Simulations/hubble_simulation_suite.py`
+**Vinculado a**: 📄 **Preprint 02 (Tensión de Hubble)**
+
+**Funcionalidad**:
+Maneja todas las simulaciones de expansión cosmológica.
+*   **Modo 1 (Crecimiento)**: Simula expansión de grafos "Vacío" vs "Cúmulo".
+*   **Modo 2 (Calibración)**: Encuentra el "Punto Dulce" para la perturbación dimensional ($Delta_H$).
+*   **Modo 3 (Densidad)**: Grafica Tasa de Expansión ($H_0$) vs Densidad Local ($\rho$).
+*   **Ejecutar**: `python hubble_simulation_suite.py`
+
+---
+
+## 🧪 3. Generador de Visuales (Visuals Generator)
+**Archivo**: `Simulations/visuals_generator.py`
+**Vinculado a**: 📄 **Visuales de la Monografía**
+
+**Funcionalidad**:
+Genera las figuras de alta calidad utilizadas en la Monografía v2.0.0.
+*   **Triángulo Áureo**: El Diagrama de Criticalidad.
+*   **Convergencia Alpha**: Gráfica con Límite Áureo.
+*   **Esquema de Nudo**: Visualización 3D del Electrón Topológico.
+*   **Ejecutar**: `python visuals_generator.py`
+
+---
+
+## 🗑️ Notas sobre Archivos Legacy
+Los scripts individuales más antiguos (ej. `dctn_particle_simulation.py`, `black_hole_collapse.py`) se han movido a `Simulations/Legacy/` para reducir el desorden.
+La lógica central se ha integrado en las suites anteriores o ha sido reemplazada por derivaciones analíticas en `golden_dctn_suite.py`.

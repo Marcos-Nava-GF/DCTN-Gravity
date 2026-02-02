@@ -33,6 +33,13 @@ $$
 
 **Relative Error:** $\approx 1.1\%$
 
+### 🧩 Topological Quantization (The Prime Knot Catalog)
+Simulation has identified that stable particles are "Prime Knots" that minimize rational resonance:
+*   **Electron**: 13 Nodes ($F_7$) - Base Charge.
+*   **Proton**: 23,869 Nodes - Baryonic Stability Hub.
+*   **Higgs**: ~3.18 Million Nodes - Saturation Limit.
+*   **Prediction**: A 89-node particle ($F_{11}$) at ~4 MeV (Dark Matter candidate).
+
 ## ⚡ The Quadratic Law of Emergence
 
 A second fundamental relation links the macroscopic topology ($\gamma$) with microscopic diffusion ($d_s$):
@@ -72,9 +79,9 @@ Formal scientific papers documenting the theory (v1.5+).
 
 ### 🧪 Simulations
 Python scripts utilized to validate the theory.
-- `Simulations/particle_discovery_hpc.py`: High-Performance script verifying the Master Equation.
-- `Simulations/hubble_tension_calibration.py`: Calibration of expansion efficiency.
-- `Simulations/visualize_electron.py`: Visualization of the "Topological Electron".
+- `Simulations/hubble_simulation_suite.py`: Unified Cosmological Suite (Growth, Calibration, Density).
+- `Simulations/dctn_particle_simulation.py`: Matter Emergence & Alpha Verification (HPC).
+- `Simulations/simulation_visualizer.py`: High-Definition Figure Generator.
 
 ---
 *Maintained by Marcos Nava (Gractal Labs)*

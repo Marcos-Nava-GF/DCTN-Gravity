@@ -1,47 +1,50 @@
-# Gractal Simulation Guide (v1.6 Refactored)
+# Gractal Simulation Guide (v2.0 Unified)
 
-This file explains what each Python simulator does and which Preprint (Paper) it connects to. All scripts are located in the `External_Assets` or `Simulations` folder.
+This folder contains the official simulation suites for Gractal Labs (DCTN Theory).
+All functionality has been consolidated into 3 main tools for ease of use.
 
 ---
 
-## 🧪 Simulation 1: Topology & Phase Transition
-**File**: `Simulations/gractal_generation.py`
-**Linked to**: 📄 **Preprint 01: Dynamic Causal Tensor Networks**
-**Parameters Updated v1.6**: Uses `GAMMA` (Topology) instead of Alpha.
-...
-## 🧪 Simulation 2a: Hubble Tension Calibration (1D)
-**File**: `Simulations/hubble_tension_calibration.py`
+## 🧪 1. The Golden-DCTN Computational Suite
+**File**: `Simulations/golden_dctn_suite.py`
+**Linked to**: 📄 **The Golden-DCTN Theory (Monograph)**
+
+**Functionality**:
+A unified demonstrator script that analytically visualizes the core pillars of the theory without heavy Monte Carlo simulation.
+*   **Mass Hierarchy**: Calculates Prime Knots for standard particles (Electron, Muon, Higgs).
+*   **Relativity**: Plots Time Dilation as Bandwidth Latency.
+*   **Strong Force**: Visualizes the Saturation Bridge between protons.
+*   **Genesis**: Simulates the Golden Crystallization of the Big Bang.
+*   **Run**: `python golden_dctn_suite.py`
+
+---
+
+## 🧪 2. Hubble Simulation Suite
+**File**: `Simulations/hubble_simulation_suite.py`
 **Linked to**: 📄 **Preprint 02 (Hubble Tension)**
-**Parameters Updated v1.6**: Uses `DELTA_H` (Hubble Correction) instead of Alpha_a.
 
-## 🧪 Simulation 2b: Density Dynamics (1D Curve)
-**File**: `Simulations/hubble_tension_density.py`
-**Linked to**: 📄 **Preprint 02**
-
-### What does it do?
-Simulates the equation `Ea = Ei * (1 + delta_h/rho^x)`. Graphically shows how expansion is faster in voids.
-
-## 🧪 Simulation 2c: Gractal N-Body Cosmology (3D)
-**File**: `Simulations/Hubble_Tension/gractal_nbody_simulation.py`
-**Linked to**: 📄 **Preprint 02**
-
-### What does it do?
-Generates a "Toy Universe" in 3D with 2000 nodes distributed fractally ($d_H \approx 1.41$).
-1.  Calculates the actual density of each point in 3D space.
-2.  Applies the "Density Scaling Law" to each particle.
-3.  **Result**: A 3D map (`p2_fig3_nbody_expansion.png`) where empty filaments glow with high expansion (red) and dense clusters remain stable (blue).
-4.  Generates raw data in `gractal_simulation_data.csv`.
+**Functionality**:
+This suite handles all cosmological expansion simulations.
+*   **Mode 1 (Growth)**: Simulates the "Void" vs "Cluster" graph expansion (Monte Carlo).
+*   **Mode 2 (Calibration)**: Finds the "Sweet Spot" for dimensional perturbation ($Delta_H$).
+*   **Mode 3 (Density)**: Plots Expansion Rate ($H_0$) vs Local Density ($\rho$).
+*   **Run**: `python hubble_simulation_suite.py`
 
 ---
 
-## 🧪 Simulation 3: Spectral Dimension Flow
-...
+## 🧪 3. Visuals Generator
+**File**: `Simulations/visuals_generator.py`
+**Linked to**: 📄 **Monograph Visuals**
 
-## 🧪 Simulation 4: The Topological Electron (Matter Emergence)
-**File**: `Simulations/visualize_electron.py`
-**Linked to**: 📄 **Preprint 04: Letter on Matter & Alpha**
+**Functionality**:
+Generates the specific high-quality figures used in the v2.0.0 Monograph.
+*   **Golden Triangle**: The Criticality Diagram.
+*   **Alpha Convergence**: Plot with Golden Limit.
+*   **Knot Schematic**: 3D Visualization of the Topological Electron.
+*   **Run**: `python visuals_generator.py`
 
-### What does it do?
-It searches for and visualizes **Local Stable Gractal Structures (LSGS)** within the generated network.
-- **Goal**: Identify subgraphs that resist spectral dissolution.
-- **Output**: `electron_candidate.png`. Shows a dense core (blue) surviving in the vacuum. This is our candidate for a fundamental particle (Lepton) emerging from pure geometry.
+---
+
+## 🗑️ Notes on Legacy Files
+Older individual scripts (e.g., `dctn_particle_simulation.py`, `black_hole_collapse.py`) have been moved to `Simulations/Legacy/` to reduce clutter.
+The core logic has been integrated into the suites above or superseded by analytical derivations in `golden_dctn_suite.py`.
