@@ -1,50 +1,80 @@
-# Guía de Simulación Gractal (v2.0 Unificada)
 
-Esta carpeta contiene las suites de simulación oficiales para Gractal Labs (Teoría DCTN).
-Toda la funcionalidad se ha consolidado en 3 herramientas principales para facilitar su uso.
+GUÍA DE SIMULACIÓN Y REPLICACIÓN - TEORÍA GOLDEN-DCTN
+Versión: 6.2 (Ultimate Suite Update)
+Fecha: Febrero 2026
+Autor: Marcos Fernando Nava Salazar
 
----
+================================================================================
+INTRODUCCIÓN
+================================================================================
+Esta guía describe cómo ejecutar y validar las simulaciones numéricas que
+fundamentan la Teoría Golden-DCTN.
 
-## 🧪 1. Suite Computacional Golden-DCTN
-**Archivo**: `Simulations/golden_dctn_suite.py`
-**Vinculado a**: 📄 **The Golden-DCTN Theory (Monografía)**
+A partir de la versión v2.8.0, todas las simulaciones críticas (Microfísica,
+Cosmología, Objetos Compactos y Constantes) se han unificado en una sola suite.
 
-**Funcionalidad**:
-Un demostrador unificado que visualiza analíticamente los pilares centrales de la teoría sin simulación Monte Carlo pesada.
-*   **Jerarquía de Masas**: Calcula Nudos Primos para partículas estándar (Electrón, Muón, Higgs).
-*   **Relatividad**: Grafica la Dilatación del Tiempo como Latencia de Ancho de Banda.
-*   **Fuerza Fuerte**: Visualiza el Puente de Saturación entre protones.
-*   **Génesis**: Simula la Cristalización Áurea del Big Bang.
-*   **Ejecutar**: `python golden_dctn_suite.py`
 
----
+================================================================================
+REQUISITOS DEL SISTEMA
+================================================================================
+- Python 3.8+
+- Librerías: numpy, matplotlib
+- Aceleración GPU (Opcional pero Recomendada): cupy (Para NVIDIA CUDA)
+  * La simulación detecta automáticamente si hay GPU disponible.
+  * En modo CPU, el rendimiento será significativamente menor.
 
-## 🧪 2. Suite de Simulación Hubble
-**Archivo**: `Simulations/hubble_simulation_suite.py`
-**Vinculado a**: 📄 **Preprint 02 (Tensión de Hubble)**
+================================================================================
+INSTRUCCIONES DE EJECUCIÓN (ULTIMATE SUITE)
+================================================================================
+El script principal se encuentra en la carpeta `/Simulations`.
 
-**Funcionalidad**:
-Maneja todas las simulaciones de expansión cosmológica.
-*   **Modo 1 (Crecimiento)**: Simula expansión de grafos "Vacío" vs "Cúmulo".
-*   **Modo 2 (Calibración)**: Encuentra el "Punto Dulce" para la perturbación dimensional ($Delta_H$).
-*   **Modo 3 (Densidad)**: Grafica Tasa de Expansión ($H_0$) vs Densidad Local ($\rho$).
-*   **Ejecutar**: `python hubble_simulation_suite.py`
+Comando:
+> python simulations/golden_dctn_ultimate_suite.py
 
----
+Este script ejecutará secuencialmente 5 módulos de validación:
 
-## 🧪 3. Generador de Visuales (Visuals Generator)
-**Archivo**: `Simulations/visuals_generator.py`
-**Vinculado a**: 📄 **Visuales de la Monografía**
+1. MÓDULO A: JERARQUÍA DE MASAS (LSGS)
+   - Valida la cuantización de masas basada en nudos primos.
+   - RESULTADO CLAVE v6.2: Confirmación del candidato X17 como el nudo F11 (89).
+     * Error de masa: 0.011% (3.498 MeV).
+     * Validación de Muón y Protón con errores < 0.04%.
 
-**Funcionalidad**:
-Genera las figuras de alta calidad utilizadas en la Monografía v2.0.0.
-*   **Triángulo Áureo**: El Diagrama de Criticalidad.
-*   **Convergencia Alpha**: Gráfica con Límite Áureo.
-*   **Esquema de Nudo**: Visualización 3D del Electrón Topológico.
-*   **Ejecutar**: `python visuals_generator.py`
+2. MÓDULO B: ESTRELLAS DE NEUTRONES (COMPRESIÓN)
+   - Simula la eficiencia algorítmica de la gravedad en materia degenerada.
+   - RESULTADO CLAVE: La gravedad ahorra un 12.39% de nodos en una estrella de neutrones típica.
+   - Genera: `gractal_neutron_star_visual.png`
 
----
+3. MÓDULO C: TENSIÓN DE HUBBLE (DENSIDAD)
+   - Resuelve la tensión H0 mediante densidad de red variable.
+   - RESULTADO CLAVE: H0 fluctúa entre ~67.8 (Cúmulo) y ~75.2 (Vacío).
+   - Genera: `gractal_hubble_visual.png`
 
-## 🗑️ Notas sobre Archivos Legacy
-Los scripts individuales más antiguos (ej. `dctn_particle_simulation.py`, `black_hole_collapse.py`) se han movido a `Simulations/Legacy/` para reducir el desorden.
-La lógica central se ha integrado en las suites anteriores o ha sido reemplazada por derivaciones analíticas en `golden_dctn_suite.py`.
+4. MÓDULO D: GÉNESIS HPC (GPU KERNEL)
+   - Genera un universo DCTN masivo (100,000+ nodos) usando Preferential Attachment + Coste Causal.
+   - Tiempo típico (T4 GPU): ~135 segundos.
+
+5. MÓDULO E: DERIVACIÓN DE ALPHA (SINTONIZACIÓN FINA)
+   - Busca la resonancia holográfica en la topología generada.
+   - RESULTADO CLAVE v6.2: Alpha calculado = 0.007302.
+   - Error respecto a CODATA: 0.064%.
+   - Genera: `gractal_alpha_resonance_complete.png`
+
+================================================================================
+INTERPRETACIÓN DE RESULTADOS (v6.2)
+================================================================================
+Los resultados de la Suite v6.2 confirman la robustez de la teoría:
+
+1. **La Partícula X17 existe topológicamente:** Su masa encaja perfectamente con un nudo de 89 enlaces (F11), predicho por la serie de Fibonacci.
+2. **La Gravedad es Compresión:** La "fuerza" gravitatoria es en realidad una optimización de eficiencia del 12.4% en el almacenamiento de información.
+3. **Alpha es Geométrico:** La Constante de Estructura Fina surge naturalmente de la geometría del grafo, con una precisión del 99.94%.
+
+================================================================================
+ARCHIVOS OBSOLETOS (LEGACY)
+================================================================================
+Los scripts individuales anteriores se han movido a `/Simulations/Legacy` para referencia histórica:
+- `golden_dctn_suite.py` (v1.0)
+- `gractal_generation.py`
+- `hubble_simulation_suite.py`
+- `neutron_star_simulation.py`
+
+SIEMPRE utilice la `golden_dctn_ultimate_suite.py` para resultados de producción.

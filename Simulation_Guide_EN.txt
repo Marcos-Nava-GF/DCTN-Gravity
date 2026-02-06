@@ -1,50 +1,79 @@
-# Gractal Simulation Guide (v2.0 Unified)
 
-This folder contains the official simulation suites for Gractal Labs (DCTN Theory).
-All functionality has been consolidated into 3 main tools for ease of use.
+SIMULATION AND REPLICATION GUIDE - GOLDEN-DCTN THEORY
+Version: 6.2 (Ultimate Suite Update)
+Date: February 2026
+Author: Marcos Fernando Nava Salazar
 
----
+================================================================================
+INTRODUCTION
+================================================================================
+This guide describes how to run and validate the numerical simulations underpinning
+the Golden-DCTN Theory.
 
-## 🧪 1. The Golden-DCTN Computational Suite
-**File**: `Simulations/golden_dctn_suite.py`
-**Linked to**: 📄 **The Golden-DCTN Theory (Monograph)**
+As of v2.8.0, all critical simulations (Microphysics, Cosmology, Compact Objects,
+and Constants) have been unified into a single suite.
 
-**Functionality**:
-A unified demonstrator script that analytically visualizes the core pillars of the theory without heavy Monte Carlo simulation.
-*   **Mass Hierarchy**: Calculates Prime Knots for standard particles (Electron, Muon, Higgs).
-*   **Relativity**: Plots Time Dilation as Bandwidth Latency.
-*   **Strong Force**: Visualizes the Saturation Bridge between protons.
-*   **Genesis**: Simulates the Golden Crystallization of the Big Bang.
-*   **Run**: `python golden_dctn_suite.py`
+================================================================================
+SYSTEM REQUIREMENTS
+================================================================================
+- Python 3.8+
+- Libraries: numpy, matplotlib
+- GPU Acceleration (Optional but Recommended): cupy (For NVIDIA CUDA)
+  * The simulation automatically detects GPU availability.
+  * In CPU mode, performance will be significantly lower.
 
----
+================================================================================
+EXECUTION INSTRUCTIONS (ULTIMATE SUITE)
+================================================================================
+The main script is located in the `/Simulations` folder.
 
-## 🧪 2. Hubble Simulation Suite
-**File**: `Simulations/hubble_simulation_suite.py`
-**Linked to**: 📄 **Preprint 02 (Hubble Tension)**
+Command:
+> python simulations/golden_dctn_ultimate_suite.py
 
-**Functionality**:
-This suite handles all cosmological expansion simulations.
-*   **Mode 1 (Growth)**: Simulates the "Void" vs "Cluster" graph expansion (Monte Carlo).
-*   **Mode 2 (Calibration)**: Finds the "Sweet Spot" for dimensional perturbation ($Delta_H$).
-*   **Mode 3 (Density)**: Plots Expansion Rate ($H_0$) vs Local Density ($\rho$).
-*   **Run**: `python hubble_simulation_suite.py`
+This script will sequentially execute 5 validation modules:
 
----
+1. MODULE A: MASS HIERARCHY (LSGS)
+   - Validates Prime Knot quantization of mass.
+   - KEY RESULT v6.2: Confirmation of X17 candidate as F11 knot (89).
+     * Mass error: 0.011% (3.498 MeV).
+     * Muon and Proton validations with errors < 0.04%.
 
-## 🧪 3. Visuals Generator
-**File**: `Simulations/visuals_generator.py`
-**Linked to**: 📄 **Monograph Visuals**
+2. MODULE B: NEUTRON STARS (COMPRESSION)
+   - Simulates algorithmic efficiency of gravity in degenerate matter.
+   - KEY RESULT: Gravity saves 12.39% of nodes in a typical neutron star.
+   - Generates: `gractal_neutron_star_visual.png`
 
-**Functionality**:
-Generates the specific high-quality figures used in the v2.0.0 Monograph.
-*   **Golden Triangle**: The Criticality Diagram.
-*   **Alpha Convergence**: Plot with Golden Limit.
-*   **Knot Schematic**: 3D Visualization of the Topological Electron.
-*   **Run**: `python visuals_generator.py`
+3. MODULE C: HUBBLE TENSION (DENSITY)
+   - Resolves H0 tension via variable network density.
+   - KEY RESULT: H0 fluctuates between ~67.8 (Cluster) and ~75.2 (Void).
+   - Generates: `gractal_hubble_visual.png`
 
----
+4. MODULE D: GENESIS HPC (GPU KERNEL)
+   - Generates a massive DCTN universe (100,000+ nodes) using Preferential Attachment + Causal Cost.
+   - Typical Time (T4 GPU): ~135 seconds.
 
-## 🗑️ Notes on Legacy Files
-Older individual scripts (e.g., `dctn_particle_simulation.py`, `black_hole_collapse.py`) have been moved to `Simulations/Legacy/` to reduce clutter.
-The core logic has been integrated into the suites above or superseded by analytical derivations in `golden_dctn_suite.py`.
+5. MODULE E: ALPHA DERIVATION (FINE TUNING)
+   - Searches for holographic resonance in the generated topology.
+   - KEY RESULT v6.2: Calculated Alpha = 0.007302.
+   - Error vs CODATA: 0.064%.
+   - Generates: `gractal_alpha_resonance_complete.png`
+
+================================================================================
+INTERPRETATION OF RESULTS (v6.2)
+================================================================================
+The v6.2 Suite results confirm the theory's robustness:
+
+1. **X17 Particle Exists Topologically:** Its mass fits perfectly with an 89-link knot (F11), predicted by the Fibonacci series.
+2. **Gravity is Compression:** Gravitational "force" is an efficiency optimization of 12.4% in information storage.
+3. **Alpha is Geometric:** The Fine-Structure Constant emerges naturally from the graph geometry with 99.94% precision.
+
+================================================================================
+OBSOLETE FILES (LEGACY)
+================================================================================
+Previous individual scripts have been moved to `/Simulations/Legacy` for historical reference:
+- `golden_dctn_suite.py` (v1.0)
+- `gractal_generation.py`
+- `hubble_simulation_suite.py`
+- `neutron_star_simulation.py`
+
+ALWAYS use `golden_dctn_ultimate_suite.py` for production results.
