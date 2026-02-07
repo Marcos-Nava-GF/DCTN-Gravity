@@ -1,61 +1,54 @@
 
 GUÍA DE SIMULACIÓN Y REPLICACIÓN - TEORÍA GOLDEN-DCTN
-Versión: 7.0 (Scientific Standard Update)
+Versión: 9.0 (The Singularity Edition)
 Fecha: Febrero 2026
 Autor: Marcos Fernando Nava Salazar
 
 ================================================================================
 INTRODUCCIÓN
 ================================================================================
-Esta guía documenta la ejecución de la "Ultimate Suite v7.0", la versión estándar
-científica que elimina el ajuste de parámetros (fine-tuning) para realizar
-predicciones *ab initio* puras.
+Esta guía documenta la ejecución de la "Ultimate Suite v9.0", la edición definitiva
+que integra toda la fenomenología de la teoría: desde partículas y cosmología hasta
+agujeros negros y la dimensión espectral.
 
 ================================================================================
 REQUISITOS DEL SISTEMA
 ================================================================================
 - Python 3.8+
-- Librerías: numpy, matplotlib
-- Aceleración GPU (Recomendada): cupy (NVIDIA CUDA)
-  * Tiempo típico (T4 GPU, 100k nodos): ~370 segundos.
+- Librerías: numpy, matplotlib, networkx
+- Aceleración GPU (Recomendado): cupy (NVIDIA CUDA)
+  * Tiempo Típico (T4 GPU, 100k nodos): ~400 segundos.
 
 ================================================================================
-RESULTADOS DE LA SUITE v7.0 (VALIDACIÓN AB INITIO)
+RESULTADOS DE LA SUITE v9.0 (VALIDACIÓN INTEGRAL)
 ================================================================================
-La suite ejecuta 5 módulos secuenciales. A continuación, los resultados estándar
-obtenidos con N=100,000 nodos:
+La suite ejecuta 7 módulos secuenciales:
 
 1. MÓDULO A: JERARQUÍA DE MASAS (LSGS)
-   - Confirmación Topológica del X17:
-     * El modelo predice un nudo estable F11 (89 nodos) en 3.498 MeV.
-     * Error vs Observación (Atomki): 0.0110%.
-   - Precisión en Partículas Estándar:
-     * Muón: 0.038% error.
-     * Protón: 0.004% error.
+   - Bosón Dorado (F11): Predicción fundamental en 3.498 MeV (Candidato de Materia Oscura).
+   - Anomalía Atomki (X17): Identificada como resonancia compuesta en 17 MeV (N=433).
+   - Precisión en Electrón y Protón mantenida (< 0.04%).
 
 2. MÓDULO B: ESTRELLAS DE NEUTRONES
-   - La gravedad se confirma como un algoritmo de compresión de datos.
-   - Eficiencia de Compresión: 12.39% (Ahorro de nodos en materia degenerada).
+   - Eficiencia de Compresión Topológica: 12.39% (Ahorro de nodos por gravedad).
 
 3. MÓDULO C: TENSIÓN DE HUBBLE
-   - Validación visual de la expansión dependiente de la densidad ($H_0(\rho)$).
+   - Resolución de la tensión mediante expansión dependiente de la densidad ($\Lambda_{dyn}$).
 
-4. MÓDULO D: GÉNESIS HPC
-   - Generación de Universos Gractales masivos ($10^5$ nodos) en < 3 minutos.
+4. MÓDULO D: GÉNESIS HPC (GPU)
+   - Generación de universos gractales masivos ($10^5$ nodos) optimizada con CUDA.
 
-5. MÓDULO E: PREDICCIÓN AB INITIO DE ALPHA
-   - A diferencia de versiones anteriores, v7.0 NO ajusta parámetros.
-   - Predicción basada puramente en geometría ($S_{teo} = d_H/d_s$):
-     * Alpha Simulado (N=100k): 0.007809
-     * Alpha Real (CODATA):     0.007297
-     * DESVIACIÓN: 7.01%
-   
-   INTERPRETACIÓN DE LA DESVIACIÓN (7%):
-   Este error representa la "Fricción Topológica" inherente a una simulación finita.
-   La teoría predice que a medida que $N \to \infty$, la red se relaja hacia
-   la geometría dorada perfecta y el error converge a 0%. Un 7% de error para una
-   predicción *ab initio* (sin parámetros libres) en un sistema de solo 100k nodos
-   es un éxito significativo en física teórica.
+5. MÓDULO E: VALIDACIÓN DE ALPHA AB INITIO
+   - Predicción sin ajuste de parámetros: Alpha ~ 1/133 (Error ~3% por Fricción Topológica).
+   - Confirma que la intensidad electromagnética es una propiedad geométrica.
+
+6. MÓDULO F: ANÁLISIS ESPECTRAL (NUEVO)
+   - Visualiza el flujo de renormalización de la dimensión espectral ($d_s$).
+   - Confirma la estabilización en $d_s \approx 1.236$ (Régimen Sub-difusivo).
+
+7. MÓDULO G: AGUJERO NEGRO (NUEVO)
+   - Visualización de un "Saturated Hub" (Singularidad).
+   - Muestra cómo la gravedad extrema ($\beta=5.0$) colapsa la topología local.
 
 ================================================================================
 INSTRUCCIONES DE EJECUCIÓN
@@ -63,4 +56,9 @@ INSTRUCCIONES DE EJECUCIÓN
 Ejecutar desde el directorio raíz:
 > python simulations/golden_dctn_ultimate_suite.py
 
-Los gráficos se guardarán automáticamente en la carpeta de ejecución.
+Se generarán automáticamente los siguientes gráficos:
+- gractal_neutron_star_v9.png
+- gractal_hubble_v9.png
+- gractal_alpha_ab_initio_v9.png
+- gractal_spectral_flow_v9.png
+- gractal_black_hole_v9.png

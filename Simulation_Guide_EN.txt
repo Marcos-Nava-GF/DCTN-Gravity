@@ -1,61 +1,54 @@
 
 SIMULATION AND REPLICATION GUIDE - GOLDEN-DCTN THEORY
-Version: 7.0 (Scientific Standard Update)
+Version: 9.0 (The Singularity Edition)
 Date: February 2026
 Author: Marcos Fernando Nava Salazar
 
 ================================================================================
 INTRODUCTION
 ================================================================================
-This guide documents the execution of the "Ultimate Suite v7.0", the scientific
-standard version that removes parameter fine-tuning to perform pure *ab initio*
-predictions.
+This guide documents the execution of the "Ultimate Suite v9.0", the definitive
+edition integrating the full phenomenology of the theory: from particles and cosmology
+to black holes and spectral dimension.
 
 ================================================================================
 SYSTEM REQUIREMENTS
 ================================================================================
 - Python 3.8+
-- Libraries: numpy, matplotlib
+- Libraries: numpy, matplotlib, networkx
 - GPU Acceleration (Recommended): cupy (NVIDIA CUDA)
-  * Typical Time (T4 GPU, 100k nodes): ~370 seconds.
+  * Typical Time (T4 GPU, 100k nodes): ~400 seconds.
 
 ================================================================================
-SUITE v7.0 RESULTS (AB INITIO VALIDATION)
+SUITE v9.0 RESULTS (INTEGRAL VALIDATION)
 ================================================================================
-The suite runs 5 sequential modules. Below are the standard results obtained
-with N=100,000 nodes:
+The suite runs 7 sequential modules:
 
 1. MODULE A: MASS HIERARCHY (LSGS)
-   - Topological Confirmation of X17:
-     * Model predicts specific F11 knot (89 nodes) at 3.498 MeV.
-     * Error vs Observation (Atomki): 0.0110%.
-   - Standard Particle Precision:
-     * Muon: 0.038% error.
-     * Proton: 0.004% error.
+   - Golden Boson (F11): Fundamental prediction at 3.498 MeV (Dark Matter Candidate).
+   - Atomki Anomaly (X17): Identified as composite resonance at 17 MeV (N=433).
+   - Precision on Electron and Proton maintained (< 0.04%).
 
 2. MODULE B: NEUTRON STARS
-   - Gravity confirmed as a data compression algorithm.
-   - Compression Efficiency: 12.39% (Node savings in degenerate matter).
+   - Topological Compression Efficiency: 12.39% (Node savings via gravity).
 
 3. MODULE C: HUBBLE TENSION
-   - Visual validation of density-dependent expansion ($H_0(\rho)$).
+   - Resolution of tension via density-dependent expansion ($\Lambda_{dyn}$).
 
-4. MODULE D: GENESIS HPC
-   - Generation of massive Gractal Universes ($10^5$ nodes) in < 3 minutes.
+4. MODULE D: HPC GENESIS (GPU)
+   - Massive Gractal universe generation ($10^5$ nodes) optimized with CUDA.
 
-5. MODULE E: AB INITIO ALPHA PREDICTION
-   - Unlike previous versions, v7.0 DOES NOT fine-tune parameters.
-   - Prediction based purely on geometry ($S_{theo} = d_H/d_s$):
-     * Simulated Alpha (N=100k): 0.007809
-     * Real Alpha (CODATA):      0.007297
-     * DEVIATION: 7.01%
-   
-   INTERPRETATION OF DEVIATION (7%):
-   This error represents the "Topological Friction" inherent in a finite simulation.
-   The theory predicts that as $N \to \infty$, the network relaxes towards the
-   perfect golden geometry and the error converges to 0%. A 7% error for an
-   *ab initio* prediction (no free parameters) in a system of only 100k nodes
-   is a significant success in theoretical physics.
+5. MODULE E: AB INITIO ALPHA VALIDATION
+   - Prediction without parameter tuning: Alpha ~ 1/133 (Error ~3% due to Topological Friction).
+   - Confirms electromagnetic intensity is a geometric property.
+
+6. MODULE F: SPECTRAL ANALYSIS (NEW)
+   - Visualizes the renormalization flow of the spectral dimension ($d_s$).
+   - Confirms stabilization at $d_s \approx 1.236$ (Sub-diffusive Regime).
+
+7. MODULE G: BLACK HOLE (NEW)
+   - Visualization of a "Saturated Hub" (Singularity).
+   - Shows how extreme gravity ($\beta=5.0$) collapses local topology.
 
 ================================================================================
 EXECUTION INSTRUCTIONS
@@ -63,4 +56,9 @@ EXECUTION INSTRUCTIONS
 Run from the root directory:
 > python simulations/golden_dctn_ultimate_suite.py
 
-Plots are automatically saved in the execution folder.
+The following charts will be automatically generated:
+- gractal_neutron_star_v9.png
+- gractal_hubble_v9.png
+- gractal_alpha_ab_initio_v9.png
+- gractal_spectral_flow_v9.png
+- gractal_black_hole_v9.png
