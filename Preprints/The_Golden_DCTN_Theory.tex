@@ -154,19 +154,48 @@ In the hydrodynamic limit ($Kn_G \ll 1$), the discrete Ollivier-Ricci curvature 
 \section{Cosmological Emergence: Resolving the Hubble Tension}
 Applying these Golden parameters to cosmic scales, we find that the expansion of the universe is a thermodynamic process of entropy maximization. A critical prediction of the DCTN is that the expansion rate is not a universal constant but a density-dependent field.
 
-\subsection{Density-Dependent Expansion Scaling (The Dynamic Lambda)}
-In a filamentous network topology characterized by a Hausdorff dimension $d_H \approx 1.41$, the efficiency of spatial emergence is inversely proportional to the nodal connectivity density ($\rho$). We propose a phenomenological scaling law for the effective expansion rate $E_a(\rho)$, where the Initial Expansion ($E_i$) provided by the vacuum energy is boosted by a \textbf{Dynamic Cosmological Term} ($\Lambda_{dyn}$):
+\subsection{Density-Dependent Expansion: The Holographic Dimensional Mismatch}
+Standard cosmology assumes a uniform Vacuum Energy density ($\Lambda$). However, the Golden-DCTN framework reveals that the maximum energy density a region can sustain without collapsing into a singularity is strictly determined by its effective topology.
 
+We derive the Holographic Density Limit $\rho_{max}$ for a region of radius $L$ and Hausdorff dimension $d$:
 \begin{equation}
-E_{a}(\rho) = E_{i} + \Lambda_{dyn}(\rho) \quad \text{where} \quad \Lambda_{dyn}(\rho) = \frac{E_i \cdot \delta_{base}}{\rho^{\gamma_c-d_H}}
+\rho_{max}(d) \propto \frac{1}{G L^{d-1}}
 \end{equation}
-Where $\rho(x) = k(x) / \langle k \rangle$ represents the \textbf{Normalized Nodal Connectivity Density} of the local region.
+This dimensional dependence creates a Holographic Mismatch between cosmic voids and matter clusters, driving differential expansion rates.
 
-Here, $\delta_{base} \approx 3.6\%$ is the efficiency factor derived from the Causal Cost exponent $\gamma_c \approx 2.472$. This formulation suggests that Einstein's $\Lambda$ is not a static constant but a dynamic field dependent on informational complexity:
-\begin{itemize}
-    \item \textbf{Cosmic Voids ($\rho \ll 1$):} In under-dense regions, $\Lambda_{dyn}$ is maximized. The expansion boosts towards $75+$ km/s/Mpc, matching SH0ES data.
-    \item \textbf{Galaxy Clusters ($\rho \gg 1$):} In dense environments, the network is saturated ($\Lambda_{dyn} \to 0$). $E_a$ converges to $E_i \approx 67.8$, recovering the standard $\Lambda$CDM behavior.
-\end{itemize}
+\subsubsection{The Dimensional Bifurcation}
+The universe operates in two distinct topological regimes:
+
+\textbf{The Void Regime (Bulk Vacuum, $d \approx 3$):} In under-dense regions ($\rho \ll 1$), the network approximates a continuous Euclidean manifold. The holographic limit follows the standard area law:
+\begin{equation}
+\rho_{void}^{limit} \propto L^{-(3-1)} = L^{-2}
+\end{equation}
+As derived in Appendix A, this imposes a strict upper bound on "structural" energy. The stochastic vacuum energy exceeds this bound by orders of magnitude (the Vacuum Catastrophe). In the Golden-DCTN, this "rejected" energy—which cannot be stored as local structure—manifests as a scalar pressure, driving maximum expansion ($H_0^{void} \approx 75$ km/s/Mpc).
+
+\textbf{The Gractal Regime (Matter Clusters, $d \approx d_H \approx 1.414$):} In dense filaments ($\rho \gg 1$), the topology is dominated by the Golden dimension ($d_H$). The holographic limit shifts dramatically:
+\begin{equation}
+\rho_{cluster}^{limit} \propto L^{-(1.414-1)} = L^{-0.414}
+\end{equation}
+Comparing the two regimes reveals a massive capacity gap:
+\begin{equation}
+\frac{\rho_{cluster}^{limit}}{\rho_{void}^{limit}} \propto L^{1.586}
+\end{equation}
+Matter clusters possess a vastly superior capacity to store energy as stable topological knots (mass) without violating the holographic bound. Consequently, the local vacuum energy is efficiently bound into gravity and structure, leaving effectively zero residual pressure for expansion ($\Lambda_{local} \to 0$).
+
+\subsubsection{The Dynamic Cosmological Term ($\Lambda_{dyn}$)}
+We formalize this bifurcation as a scalar field dependent on the local Nodal Connectivity Density $\rho(x)$. The effective expansion rate $E_a$ is given by:
+\begin{equation}
+E_a(\rho) = E_i + \Lambda_{dyn}(\rho)
+\end{equation}
+Where the dynamic term scales inversely with the dimensional efficiency of the region:
+\begin{equation}
+\Lambda_{dyn}(\rho) = \frac{E_i \cdot \delta_{base}}{\rho^{\gamma_c - d_H}}
+\end{equation}
+
+In Voids: The low structural capacity forces the vacuum energy into kinetic expansion.
+In Clusters: High structural capacity allows the network to "absorb" the vacuum energy into gravitational binding, recovering the standard $\Lambda$CDM behavior ($H_0^{cluster} \approx 67.8$ km/s/Mpc).
+
+This resolves the Hubble Tension not as a measurement error, but as a confirmation of the universe's dual fractal dimensionality.
 
 \subsection{Chronological Consistency (The Methuselah Limit)}
 Any modification to $H_0$ impacts the age of the universe $t_0$. A naive boost to 74 km/s/Mpc globally would predict $t_0 < 13.6$ Ga, conflicting with the age of the oldest known star, HD 140283 ("Methuselah", $\approx 14.46 \pm 0.8$ Ga).
