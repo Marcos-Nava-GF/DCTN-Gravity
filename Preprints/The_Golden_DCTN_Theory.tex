@@ -654,6 +654,62 @@ which differs from the observed value by a factor of \(\sim 12\) (i.e., the gene
 
 \paragraph{Conclusion.} The derivation demonstrates that the holographic correction \((L_p/R_H)^2\) successfully produces the \(\sim10^{-122}\) reduction required to bring a Planck-scale density down to the observed order of magnitude of dark energy density. The exact numerical equality depends on conventions (Planck mass vs. reduced Planck mass, spherical geometric prefactors, precise choice of \(H_0\), etc.), but the physical argument and the resulting order of magnitude are remarkably consistent.
 
+\section{Appendix B: The Zero-Infinity Identity: Formal Conjecture}
+
+\subsection{Statement (Conjectural)}
+Let $\mathcal{L}:\mathcal{R}\to(0,\infty]$ be the \emph{processing latency} assigned to each causal region $\mathcal{R}$ (interpreted physically as the mean time between local updates, inverse of the local operation rate). We define the regularized \emph{processing capacity}
+\[
+\Omega(\mathcal{L};\Lambda) \equiv \frac{1}{\mathcal{L}+\epsilon(\Lambda)} ,
+\]
+with $\epsilon(\Lambda)>0$ a physical cutoff dependent on relevant scales $\Lambda$ (e.g., $\ell_p$, causal radius $L$, or holographic limits). The \textbf{Zero-Infinity Conjecture} postulates that the effective properties of the vacuum and singularities can be described by the formal limits of $\Omega$ when $\mathcal{L}\to0^+$ or $\mathcal{L}\to\infty$, always understood after an appropriate physical regularization.
+
+\subsection{Holographic Regularization and Operational Bound}
+The formal divergence $\lim_{\mathcal{L}\to0^+}\Omega=\infty$ is avoided by imposing information/operation bounds derived from holographic and thermodynamic principles. In particular, the effective operational capacity is bounded by the maximum information associated with the causal region,
+\[
+\Omega_{\rm eff}(\mathcal{R}) \leq C \frac{A(\mathcal{R})}{\ell_p^2},
+\]
+where $A(\mathcal{R})$ is the causal area (e.g., causal horizon area) and $C$ is a dimensionless factor parametrizing operations per unit of information (see classical discussions on informational limits and information thermodynamics).
+
+\subsection{Connection with Vacuum Density}
+Assuming that the effective vacuum energy density $\rho_{\mathrm{vac}}$ is proportional to an operational density normalized by the Planck scale and causal geometry, a natural relation connecting the conjecture with the holographic formula used in the body of the text is
+\[
+\rho_{\mathrm{vac}} \sim \rho_{\mathrm{Pl}}\left(\frac{\ell_p}{L}\right)^2,
+\]
+where $L$ is the causal scale of interest (e.g., Hubble radius) and $\rho_{\mathrm{Pl}}$ the Planck density. This relation appears as the dimensional version of the joint imposition of the regularization $\epsilon(\Lambda)\sim\ell_p$ plus the holographic bound on $\Omega_{\rm eff}$.
+
+\subsection{Numerical Example (Choice $\epsilon(\Lambda)=\ell_p$)}
+Let $\epsilon(\Lambda)=\ell_p$ and $L$ equal to the Hubble cutoff radius used in Appendix A ($L\equiv R_H = c/H_0$). Using numerical values in SI:
+
+\[
+\ell_p = 1.616255\times10^{-35}\ \mathrm{m},\qquad
+R_H \approx 1.3725\times10^{26}\ \mathrm{m}.
+\]
+
+The holographic factor is
+\[
+\left(\frac{\ell_p}{R_H}\right)^2 \approx \left(\frac{1.616255\times10^{-35}}{1.3725\times10^{26}}\right)^2 \approx 1.3867\times10^{-122}.
+\]
+
+Using the Planck density
+\[
+\rho_{\mathrm{Pl}}\equiv\frac{m_{\mathrm{Pl}}}{\ell_p^3}\approx 5.1548\times10^{96}\ \mathrm{kg\ m^{-3}},
+\]
+we obtain the regularized holographic estimation
+\[
+\rho_{\mathrm{vac}}\sim \rho_{\mathrm{Pl}}\left(\frac{\ell_p}{R_H}\right)^2
+\approx 5.1548\times10^{96}\times1.3867\times10^{-122}
+\approx 7.15\times10^{-26}\ \mathrm{kg\ m^{-3}}.
+\]
+
+This value has the correct order of magnitude relative to the energy density associated with $\Lambda$ (see numerical comparison with $\rho_{\Lambda,\mathrm{obs}}$ in Appendix A.5). Differences by factors $\mathcal{O}(1\text{--}10)$ are attributable to conventions (reduced vs. non-reduced Planck mass, geometric factors $8\pi$, etc.) and the choice of factor $C$ in the holographic bound.
+
+\subsection{Interpretation and Limits of the Conjecture}
+\begin{itemize}
+  \item The above formulation offers a \emph{path} to interpret the heuristic notion of "infinite capacity" of the vacuum in terms of a physically regularized function $\Omega(\mathcal{L};\Lambda)$ and a holographic bound that prevents observable divergences.
+  \item The conjecture remains falsifiable: by explicitly choosing $\epsilon(\Lambda)$ and $C$, numerical predictions for the dependence $\rho_{\mathrm{vac}}(L)$ are derived, and thus for the effective evolution $\rho_{\mathrm{vac}}(z)$, deviations in cosmological observables, and possible vacuum correlation signals in precision experiments.
+  \item We present the Zero-Infinity Identity as a mitigated conjecture—its use in calculations must always be accompanied by the specification of the regularization $\epsilon(\Lambda)$ and the associated uncertainty margin.
+\end{itemize}
+
 \textbf{Conclusion:} The observed "Dark Energy" is simply the surface-area-limited processing capacity of the causal network. The Golden-DCTN theory predicts that $\rho_{vac}$ is not a fundamental constant, but evolves dynamically as $L^{-2}$ (the inverse square of the causal horizon), consistent with the holographic bound.
 
 \begin{thebibliography}{9}
