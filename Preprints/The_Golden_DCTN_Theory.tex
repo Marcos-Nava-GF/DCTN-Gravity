@@ -491,6 +491,35 @@ The results demonstrate a stark \textbf{Topological Phase Separation}:
 
 This proves that the precise value of the fine-structure constant (1/137) is not a cosmic accident, but the unique thermodynamic ground state of a causal network stabilized by the irrationality of the Golden Ratio.
 
+\subsection{The Asymptotic Identity Conjecture: Vacuum Regularization}
+
+While the Golden-DCTN framework postulates a functional equivalence between the Stochastic Vacuum and an Information Source, it is necessary to formalize this relationship to avoid non-physical divergences. We propose the \textit{Regularized Zero-Infinity Identity}.
+
+\subsubsection{Definition of Latency and Capacity}
+We define the \textbf{Processing Latency} ($\mathcal{L}$) as the proper time interval required to update the state of a node or causal region $\mathcal{R}$. In the hydrodynamic limit, this is inversely proportional to the \textbf{Effective Computational Capacity} ($\Omega$):
+
+\begin{equation}
+\Omega(\mathcal{L}) \equiv \frac{1}{\mathcal{L} + \epsilon_{\phi}}
+\end{equation}
+
+Where $\epsilon_{\phi}$ is the \textbf{Gractal Regularization} parameter. Unlike a simple mathematical singularity where $\mathcal{L} \to 0$ implies $\Omega \to \infty$, the DCTN imposes a fundamental cutoff derived from Golden Criticality.
+
+\subsubsection{Physical Limits}
+\begin{itemize}
+    \item \textbf{Matter Regime (Halt):} In regions of high topological complexity (Black Holes), the latency diverges ($\mathcal{L} \gg \epsilon_{\phi}$), driving the external update capacity to zero ($\Omega \to 0$). This is consistent with the \textit{Bekenstein Bound}, where entropy is maximal and dynamics freeze for an external observer \cite{bekenstein_bound}.
+    
+    \item \textbf{Vacuum Regime (Source):} In the stochastic substrate, the structural latency is null ($\mathcal{L} \to 0$). However, the capacity is not infinite, but saturates at the limit imposed by the network's minimum update time (Planck time scaled by $\phi$):
+    
+    \begin{equation}
+    \Omega_{max} \approx \frac{1}{\epsilon_{\phi}} \sim \frac{1}{t_{Planck}}
+    \end{equation}
+\end{itemize}
+
+\subsubsection{Thermodynamic Consistency}
+This regularization is necessary to satisfy \textit{Landauer's Principle} \cite{landauer}, which establishes a minimum energy cost for information processing. If $\Omega$ were literally infinite, the vacuum would possess infinite temperature. By introducing $\epsilon_{\phi}$, the vacuum energy becomes finite but immense, corresponding exactly to the theoretical vacuum energy density ($\rho_{vac} \sim M_p^4$) which our theory then holographically suppresses via the factor $(L_p/R_H)^2$ derived in Eq. 27.
+
+Therefore, phenomenal existence does not arise from a forbidden division by zero, but from the asymptotic operation of the network operating near, but never reaching, the zero-latency limit $\epsilon_{\phi}$.
+
 \section{Conclusion: The Proof by Residuals}
 The unification of Cosmology, Gravity, and Matter under the Golden-DCTN framework reveals a startling precision. The 1.1\% deviation in our derivation of $\alpha$ is not noise; it is the fingerprint of the Golden Ratio. By fixing the gravitational exponent $\beta = 2/\phi$, we have closed the system, offering a background-independent theory where physics emerges inevitably from the stability requirements of information.
 
@@ -630,10 +659,12 @@ which differs from the observed value by a factor of \(\sim 12\) (i.e., the gene
 \begin{thebibliography}{9}
 \bibitem{wolfram2020} S. Wolfram, \textit{A Project to Find the Fundamental Theory of Physics} (2020).
 \bibitem{bekenstein} J. D. Bekenstein, \textit{Black holes and entropy}, Phys. Rev. D 7, 2333 (1973).
+\bibitem{bekenstein_bound} J. D. Bekenstein, \textit{Universal upper bound on the entropy-to-energy ratio for bounded systems}, Phys. Rev. D 23, 287 (1981).
 \bibitem{ambjorn2005} J. Ambjørn et al., \textit{Spectral dimension of causal dynamical triangulations}, Phys. Rev. Lett. 95, 171301 (2005).
 \bibitem{penrose} R. Penrose, \textit{The role of aesthetics in pure and applied mathematical research} (1974).
 \bibitem{levinwen} M. Levin and X.-G. Wen, \textit{String-net condensation: A physical mechanism for topological phases}, Phys. Rev. B 71, 045110 (2005).
 \bibitem{prigogine} I. Prigogine, \textit{The End of Certainty: Time, Chaos, and the New Laws of Nature}, Free Press (1997).
+\bibitem{landauer} R. Landauer, \textit{Irreversibility and Heat Generation in the Computing Process}, IBM J. Res. Dev. 5, 183 (1961).
 \bibitem{kauffman} L. H. Kauffman, \textit{Knots and Physics}, World Scientific (1991).
 \bibitem{bilson} S. Bilson-Thompson, \textit{A topological model of composite preons}, arXiv:hep-ph/0503213 (2005).
 \bibitem{gractal_suite} M. F. Nava Salazar, \textit{The Golden-DCTN Computational Suite v7.0}, GitHub Repository (2026). Available at: \url{https://github.com/Marcos-Nava-GF/DCTN-Gravity/}
