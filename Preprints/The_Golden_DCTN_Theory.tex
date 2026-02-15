@@ -27,7 +27,7 @@ keywordstyle=\color{blue}
 
 \title{\textbf{The PHI-DCTN Theory: \\ Unified Emergence of Gravity, Matter, and Dark Energy from Topological Vacuum Impedance}}
 \author{\textbf{Marcos Fernando Nava Salazar} \\ \textit{Independent Researcher, Gractal Labs, Mexico}}
-\date{February 2026 | Version: 3.0.0}
+\date{February 2026 | Version: 4.0.0 (Dynamical Efficiency Update)}
 
 \begin{document}
 
@@ -667,6 +667,44 @@ where \(\eta\) represents an effective efficiency parameter encoding network acc
 
 Thus, in Golden–DCTN, vacuum energy is not a fundamental constant but the horizon-limited processing capacity of the causal network.
 
+
+
+\subsection{Dynamical Vacuum Efficiency $\eta(z)$ (Short Form)}
+
+To account for the history-dependent accessibility of horizon-limited processing in the Golden-DCTN substrate, we promote the previously constant efficiency \(\eta\) to a dynamical function \(\eta(z)\). The operational ansatz relating vacuum energy to horizon-limited processing becomes
+
+\[
+\rho_{\rm vac}(z)=\eta(z)\,\rho_{\rm crit}(z)=\eta(z)\,\frac{3H^2(z)}{8\pi G}.
+\]
+
+Substituting into the flat Friedmann equation yields the modified background equation
+
+\[
+(1-\eta(z))\,H^2(z)=\frac{8\pi G}{3}\big[\rho_m(z)+\rho_r(z)\big].
+\]
+
+Two representative parametrizations are studied in this work:
+
+\begin{itemize}
+  \item \textbf{Model A (phenomenological)}: \(\eta(z)=\eta_0(1+z)^{-s}\). This produces the explicit solution
+  \[
+  H^2(z)=\frac{8\pi G}{3}\frac{\rho_m(z)+\rho_r(z)}{1-\eta_0(1+z)^{-s}}.
+  \]
+  \item \textbf{Model B (horizon-coupled)}: \(\eta(H)=\eta_0(H/H_0)^{\alpha}\), which implies the implicit equation
+  \[
+  \big(1-\eta_0(H/H_0)^{\alpha}\big)H^2=\frac{8\pi G}{3}\big[\rho_m+\rho_r\big],
+  \]
+  solved numerically at each redshift.
+\end{itemize}
+
+The effective equation of state of the dynamical vacuum is obtained from
+\[
+w_{\rm vac}(z)=-1+\frac{1+z}{3}\frac{1}{\rho_{\rm vac}(z)}\frac{d\rho_{\rm vac}}{dz},
+\]
+with \(\rho_{\rm vac}(z)=\eta(z)\,3H^2(z)/(8\pi G)\). In general \(w_{\rm vac}(z)\) departs from \(-1\) when \(\eta\) varies appreciably with \(z\).
+
+We include \(\eta_0\) and the shape parameter (\(s\) or \(\alpha\)) in the cosmological inference and assess model viability via Bayesian evidence and posterior predictive checks (see Bayesian Model Comparison section).
+
 \subsection{The Mechanism: Edge Nucleation and the Active Boundary}
 The expansion of the universe is identified as a local process occurring at the \textbf{Active Boundary} of the network (nodes with degree $k=1$). A boundary node faces a binary thermodynamic choice based on the availability of neighbors:
 \begin{itemize}
@@ -815,6 +853,88 @@ The observed dark energy fraction is
 \]
 
 where \(0 < \eta \le 1\) parametrizes effective accessibility of degrees of freedom or network friction effects in Golden–DCTN.
+
+
+
+\section{Appendix B: Dynamical efficiency \(\eta(z)\): parametrizations, numerics and Bayesian implementation}
+
+\subsection{Parametrizations}
+
+We consider two physically motivated families:
+
+\paragraph{Model A: power-law decay with redshift}
+\[
+\eta(z)=\eta_0(1+z)^{-s},\qquad \eta_0\in(0,1),\ s\ge0.
+\]
+Motivation: as the causal scale shrinks at higher \(z\), accessibility/friction reduces and \(\eta\to 0\) at early times (recovers standard early-universe cosmology).
+
+\paragraph{Model B: horizon-coupled form (implicit)}
+\[
+\eta(H)=\eta_0\left(\frac{H}{H_0}\right)^{\alpha},\qquad \eta_0\in(0,1),\ \alpha\lesssim0.
+\]
+Motivation: direct holographic coupling to the causal scale; note that \(\eta\) depends on \(H\) so Friedmann is implicit.
+
+\subsection{Modified background equations}
+
+\paragraph{Model A (explicit):}
+\[
+H^2(z) = \frac{8\pi G}{3}\ \frac{\rho_{m0}(1+z)^3+\rho_{r0}(1+z)^4}{1-\eta_0(1+z)^{-s}}.
+\]
+
+\paragraph{Model B (implicit):}
+For each \(z\) solve for the positive root \(H>0\) of
+\[
+F(H;z)= (1-\eta_0(H/H_0)^{\alpha})H^2 - \frac{8\pi G}{3}\big[\rho_{m0}(1+z)^3+\rho_{r0}(1+z)^4\big] = 0.
+\]
+
+\subsection{Priors and physical constraints}
+
+Recommended priors:
+\begin{itemize}
+  \item \(\eta_0 \sim \mathcal{U}(0,0.95)\) (upper limit below 1 to avoid singularities).
+  \item \(\alpha \sim \mathcal{U}(-5,0)\) for Model B (favoring \(\eta\to0\) at high \(H\)).
+\end{itemize}
+
+Enforce the constraint \(1-\eta(z)>\epsilon\) for all redshifts used in likelihood evaluations (suggest \(\epsilon=10^{-3}\)), implemented in the prior transform (reject parameter draws violating it).
+
+\subsection{Numerical implementation notes}
+
+\begin{itemize}
+  \item Model A: closed-form \(H(z)\), cheap to evaluate and recommended for initial exploration.
+  \item Model B: use a robust root-finder (Brent or safe Newton) using \(H_{\Lambda\mathrm{CDM}}(z)\) as seed. Precompute a z-grid and cache H(z) if many likelihood evaluations reuse the same grid.
+  \item For CMB likelihoods: ensure \(\eta(z\sim 1100)\approx 0\) within priors to avoid modifying recombination physics; otherwise include recombination code modifications.
+\end{itemize}
+
+\subsection{Effective equation-of-state}
+
+Compute numerically
+\[
+w_{\rm vac}(z)=-1+\frac{1+z}{3}\frac{1}{\eta(z)H^2(z)}\left(\eta'(z)H^2(z)+2\eta(z)H(z)H'(z)\right),
+\]
+where prime denotes derivative with respect to \(z\). Evaluate derivatives with analytic expressions when available (Model A) or finite differences (Model B).
+
+\subsection{Bayesian pipeline integration (explicit)}
+
+To include \(\eta\) dynamics in the Bayesian comparison pipeline:
+\begin{enumerate}
+  \item \textbf{Parameter vector:} extend \(\theta\) to include \(\eta_0\) and shape parameter (\(s\) or \(\alpha\)). Example:
+  \[
+  \theta = \{\Omega_b h^2,\Omega_c h^2,\theta_s,\tau,n_s,\ln(10^{10}A_s),\eta_0,s\}.
+  \]
+  \item \textbf{Prior transform:} implement the priors above and reject draws that violate \(1-\eta(z)>\epsilon\) for \(z\in[0,z_{\max}]\) (\(z_{\max}\) chosen by dataset; for Planck include up to recombination).
+  \item \textbf{Background module:} replace background solver with Model A formula or with root-finder for Model B.
+  \item \textbf{Likelihoods:} pass computed \(H(z)\), comoving distances, sound horizon \(r_s\), and CMB angular scales into the standard likelihood wrappers (Planck, Pantheon+, BAO). If \(\eta\) is non-negligible at recombination, use a recombination code consistent with the modified background.
+  \item \textbf{Sampler settings:} use nested sampling (e.g. \texttt{dynesty} with nlive 1500–3000) to obtain evidence \(Z\) and posterior. Ensure adequate live points because model is higher-dimensional.
+  \item \textbf{Outputs to report:} posterior marginal for \(\eta_0\) and shape param, covariance with \(\Omega_{m0}\); evidence \(\ln Z\) with error; Bayes factor \(\ln B\) against \(\Lambda\)CDM; LOO-CV/WAIC; posterior predictive checks on distances and CMB peak positions.
+\end{enumerate}
+
+\subsection{Interpretation guidance}
+
+\begin{itemize}
+  \item If \(\eta_0\) posterior peaks near zero, data do not favor dynamical vacuum efficiency (ΛCDM recovered).
+  \item If \(\eta_0\) posterior prefers \(\sim 0.6\!-\!0.8\) with \(s>0\) (or \(\alpha<0\)), model can reproduce current \(\Omega_\Lambda\) while preserving early-universe physics.
+  \item Use forecasts (Fisher or simulated datasets) to estimate the experimental precision required to discriminate models (compute expected \(\Delta\ln Z\) for Stage-IV level improvements).
+\end{itemize}
 
 \begin{thebibliography}{9}
 \bibitem{wolfram2020} S. Wolfram, \textit{A Project to Find the Fundamental Theory of Physics} (2020).
