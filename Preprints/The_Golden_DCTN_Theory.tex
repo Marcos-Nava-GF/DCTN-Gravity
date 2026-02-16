@@ -3,7 +3,12 @@
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage{amsmath, amssymb, amsthm}
-\usepackage{graphicx}
+
+% --- AJUSTE GRACTAL LABS: MODO DEMO ---
+% IMPORTANTE: He a\~nadido [demo] para que el PDF compile con cuadros negros
+% si no tienes las imagenes a mano. BORRA '[demo]' cuando tengas los archivos .jpg/.png listos.
+\usepackage[demo]{graphicx}
+
 \usepackage{geometry}
 \usepackage{booktabs}
 \usepackage{caption}
@@ -11,6 +16,11 @@
 \usepackage{listings}
 \usepackage{cite}
 \usepackage{xcolor}
+
+% --- MEJORA DE TABLAS ---
+\usepackage{tabularx} % Para tablas que se ajustan al ancho
+\usepackage{ragged2e} % Para mejor justificacion dentro de tablas
+
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=red]{hyperref}
 
 % Code block configuration
@@ -27,7 +37,7 @@ keywordstyle=\color{blue}
 
 \title{\textbf{The PHI-DCTN Theory: \\ Unified Emergence of Gravity, Matter, and Dark Energy from Topological Vacuum Impedance}}
 \author{\textbf{Marcos Fernando Nava Salazar} \\ \textit{Independent Researcher, Gractal Labs, Mexico}}
-\date{February 2026 | Version: 4.2.1 (Photon \& Alpha Firewall Refinement)}
+\date{February 2026 | Version: 4.3.0 (Technical Quality Improvements)}
 
 \begin{document}
 
@@ -327,8 +337,8 @@ Particles are redefined as Local Stable Gractal Structures (LSGS) or transient r
 \begin{table}[h!]
 \centering
 \renewcommand{\arraystretch}{1.3}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|l|c|l|l|l|p{0.35\textwidth}|}
+% MODIFICACION: Uso de tabularx para ajustar al ancho y evitar desbordes
+\begin{tabularx}{\textwidth}{|l|l|c|l|l|c|X|}
 \hline
 \textbf{Class} & \textbf{Particle} & \textbf{Sym} & \textbf{Nodes ($N$)} & \textbf{Type} & \textbf{Error} & \textbf{Network Status \& Behavior} \\ \hline
 I. Transparency & Neutrino & $\nu$ & 2 & Fibonacci ($F_3$) & - & \textbf{Topological Transparency:} Minimal interaction. Stable. \\ \hline
@@ -342,8 +352,7 @@ V. Bridges & Pions/Kaons & $\pi, K$ & 3k - 12k & Composite & - & \textbf{Ephemer
 VI. Heavy Resonances & $\tau, W, Z$ & - & 45k - 2.3M & Composite & - & \textbf{Saturation Mediators:} High-mass clusters representing severe lag. \\ \hline
 VII. Universal Limits & Higgs & $H^0$ & 3.18M & Super-Knot & 0.0001\% & \textbf{The Regulator:} Defines the saturation threshold. \\ \hline
 VII. Universal Limits & Top Quark & $t$ & $\sim$4.4M (Band) & Prime Resonance Cluster & N/A (Width) & \textbf{Asymptotic Instability:} High prime density at this scale prevents isolation. The particle exists as a superposition of neighboring prime knots (Resonance Band), causing immediate decay. \\ \hline
-\end{tabular}%
-}
+\end{tabularx}
 \caption{The Gractal Periodic Table of Topological Defects.}
 \label{tab:periodic_table}
 \end{table}
@@ -529,24 +538,23 @@ To facilitate peer review and interdisciplinary consistency, we provide a compar
 \begin{table}[h!]
 \centering
 \renewcommand{\arraystretch}{1.2}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|l|p{0.5\textwidth}|}
+% MODIFICACION: Tabla mas limpia con tabularx
+\begin{tabularx}{\textwidth}{|l|l|X|}
 \hline
-\textbf{Gractal / DCTN Term} & \textbf{Standard Physics Equivalent} & \textbf{Physical Justification} \\ \hline
+\textbf{Gractal / DCTN Term} & \textbf{Standard Physics} & \textbf{Physical Justification} \\ \hline
 Gractal Geometry & Spacetime Manifold & The macroscopic limit of the discrete causal graph. \\ \hline
 Network Refresh Rate ($c$) & Speed of Light & The maximum frequency of information propagation across nodes. \\ \hline
-Processing Latency & Inertial Mass / Gravitational Potential & Resistance to state updates due to internal topological complexity ($b_1 \ge 1$). \\ \hline
+Processing Latency & Inertial Mass & Resistance to state updates due to internal topological complexity ($b_1 \ge 1$). \\ \hline
 Causal Cost ($\gamma$) & Principle of Least Action & The geometric penalty that forces the system into optimal geodesics. \\ \hline
-Topological Defect / Prime Knot & Fundamental Particle & A stable, localized high-density cluster with a prime nodal configuration. \\ \hline
+Topological Defect & Fundamental Particle & A stable, localized high-density cluster with a prime nodal configuration. \\ \hline
 Saturated Hub & Black Hole & A region where connectivity density reaches the Bekenstein holographic limit. \\ \hline
-Bandwidth Saturation & Strong Force / Confinement & The optimization of shared processing between proximate high-density hubs. \\ \hline
+Bandwidth Saturation & Strong Force & The optimization of shared processing between proximate high-density hubs. \\ \hline
 Nodal Update Frequency & Proper Time ($\tau$) & The sequence of discrete computational cycles within a local frame. \\ \hline
 Gractal Lensing & Spacetime Curvature & The deviation of information paths caused by local processing "lag". \\ \hline
 Stochastic Vacuum & Zero-Point Field & An infinite field of zero-mean information fluctuations. \\ \hline
 Holographic Balance & Equivalence Principle & The constraint where gravitational pull equals information processing rate. \\ \hline
-\end{tabular}%
-}
-\caption{Dictionary of Gractal-Standard Translation.}
+\end{tabularx}
+\caption{Dictionary of Gractal-Standard Translation (Optimized).}
 \label{tab:dictionary}
 \end{table}
 
@@ -782,11 +790,12 @@ Our results present a paradox: the "errors" in our predictions are, in fact, the
 The Golden-DCTN theory suggests that the constants of nature are not arbitrary tuning knobs, but the inevitable friction coefficients of a self-stabilizing information graph.
 
 \appendix
-\section{Appendix A: Full Horizon-Operational Derivation}
+\section{Full Horizon-Operational Derivation}
+\label{app:derivation}
 
 We derive the vacuum density from horizon-limited information processing.
 
-\subsection*{A.1 Maximum Information Content}
+\subsection{Maximum Information Content}
 
 The Bekenstein–Hawking entropy bound gives the maximum number of bits within a sphere of radius \(L\):
 
@@ -796,7 +805,7 @@ N_{\max} = \frac{A c^3}{4 G \hbar \ln 2},
 A = 4\pi L^2.
 \]
 
-\subsection*{A.2 Minimum Energy per Operation}
+\subsection{Minimum Energy per Operation}
 
 From the Landauer bound, the minimum energy required to erase one bit at temperature \(T\) is
 
@@ -816,7 +825,7 @@ this becomes
 E_{\mathrm{op}} = \frac{\hbar H}{2\pi} \ln 2.
 \]
 
-\subsection*{A.3 Maximum Update Rate}
+\subsection{Maximum Update Rate}
 
 The maximum characteristic update frequency of a region of size \(L\) is
 
@@ -831,7 +840,7 @@ Thus the maximal operation rate is
 = \frac{A c^3}{4 G \hbar \ln 2} H.
 \]
 
-\subsection*{A.4 Total Power}
+\subsection{Total Power}
 
 The total power associated with horizon processing is
 
@@ -857,7 +866,7 @@ The factors \(\hbar\) and \(\ln 2\) cancel:
 \frac{A c^3}{8\pi G} H^2.
 \]
 
-\subsection*{A.5 Energy and Density}
+\subsection{Energy and Density}
 
 Over a Hubble time \(t_H \sim 1/H\), the total energy is
 
@@ -889,7 +898,7 @@ Finally, converting to mass density:
 \frac{3 H^2}{8\pi G}.
 \]
 
-\subsection*{A.6 Interpretation}
+\subsection{Interpretation}
 
 This equals the cosmological critical density:
 
@@ -909,7 +918,8 @@ where \(0 < \eta \le 1\) parametrizes effective accessibility of degrees of free
 
 
 
-\section{Appendix B: Dynamical efficiency \(\eta(z)\): parametrizations, numerics and Bayesian implementation}
+\section{Dynamical efficiency \(\eta(z)\): parametrizations, numerics and Bayesian implementation}
+\label{app:bayesian}
 
 \subsection{Parametrizations}
 
