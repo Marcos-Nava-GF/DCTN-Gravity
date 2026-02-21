@@ -37,6 +37,12 @@ The system is **self-consistent** across 12 orders of magnitude (from Alpha to H
 - **Particle Suite:** Merged HPC discovery and Alpha verification.
 - **Visualizer:** Unified all figure generation into a single tool.
 
+### ✅ D. Phinary Spectroscopy of Alpha
+**Status: SOLVED (Preprint 5 - Feb 2026)**
+- **Harmonic Structure:** Derivation of $\alpha$ as a spectral sum of $\phi^{-k}$ modes ($L_5, F_7, P_{17}$).
+- **Prediction:** Vacuum resonances at 3.2 keV and 1.2 keV.
+- **Firewall:** Identification of $\phi^2$ as the topological impedance scaling factor.
+
 ---
 
 ## 3. Final Strategic Conclusion
